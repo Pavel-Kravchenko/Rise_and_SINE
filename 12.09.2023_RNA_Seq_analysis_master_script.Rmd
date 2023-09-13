@@ -41,6 +41,7 @@ source("./readKallisto.R") # from Martin Morgan (mtmorgan)
 # system("tar -xf mus_musculus.tar.gz")
 ```
 
+
 # Prepearing to process RNA-Seq
 ```{r}
 
@@ -167,10 +168,11 @@ processRNA_Seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
                                     "padj < 0.01 & log2FoldChange > 4" = "orange")) +
       NULL + theme_light()
     
-    ggsave("DE_"%+% directory %+%".pdf")
+    ggsave("./figures/DE_"%+% directory %+%".pdf")
   }
 }
 ```
+
 
 # Processing RNA-Seq
 ```{r}
@@ -189,6 +191,7 @@ processRNA_Seq(home, "ZGA_Guo_et_al_C57BL_6_GSE134832_paired_polyA", gtf.gr)
 processRNA_Seq(home, "ZGA_Zhang_et_al_C57BL_6NxPWK_PhJ_GSE71434_paired_polyA", gtf.gr)
 processRNA_Seq(home, "ZGA_Zhang_et_al_B6D2F1_J_GSE169632_paired_total", gtf.gr)
 ```
+
 
 # Filtering ZGA genes
 ```{r}
@@ -247,10 +250,11 @@ nVennR_gene_list_polyA <- list(
                                        "CAST/EiJxC57BL/6J (N=1)" = unique(toupper(annotatedRes_Deng$SYMBOL))
   )
 
-pdf("nVennR_gene_list_polyA_euler.pdf")
-plot(euler(nVennR_gene_list_polyA, shape="ellipse"), quantities = TRUE, legend = TRUE)
+pdf("./figures/nVennR_gene_list_polyA.pdf")
+p = plot(euler(nVennR_gene_list_polyA, shape="ellipse"), quantities = TRUE, legend = TRUE)
+print(p)
 dev.off()
-plotVenn(nVennR_gene_list_polyA, outFile="plotVenn_polyA.svg")
+pV = plotVenn(nVennR_gene_list_polyA, outFile="./figures/nVennR_plot_polyA.svg")
 
 set_size = function(w, h, factor=1.5) {
     s = 1 * factor
@@ -263,7 +267,7 @@ set_size = function(w, h, factor=1.5) {
     )
 }
 
-pdf("nVennR_gene_list_polyA_UpSetR_plot.pdf")
+pdf("./figures/gene_list_polyA_UpSetR_plot.pdf")
 set_size(8, 5)
 size = get_size_mode('exclusive_intersection')
 ComplexUpset::upset(fromList(nVennR_gene_list_polyA), #[apply(fromList(nVennR_gene_list_polyA_total),1,sum) > 3, ], 
@@ -301,6 +305,11 @@ dev.off()
 ```
 
 
+# Selectiong Pan ZGA list
+$$
+Pan \ ZGA \ list = \bigcup_{ \forall k ∈𝔸}^{} (\bigcap_{\forall \alpha ∈𝔸} ZGA \ list \ \alpha, \bigcap_{ \forall \alpha ∈𝔸\backslash k} ZGA \ list \ \alpha), \ where \ 𝔸 \ is \ a \ set \ of \ ZGA \ datasets
+$$
+
 # Checking Pan categories
 ```{r}
 cc = c(nrow(fromList(gene_list)[apply(fromList(gene_list),1,sum) == 10, ]))
@@ -315,22 +324,22 @@ df = as.data.frame(list(Overlap=cc,Datasets=cn))
 
 range = max(df$Overlap) -min(df$Overlap)
 
-ggplot(df, aes(x=fct_inorder(cn), y=cc))+
-geom_bar(stat="identity",colour=NA,linewidth=0)+
-  theme_classic()+
-  ylab("Overlaped genes")+
+ggplot(df, aes(x=fct_inorder(cn), y=cc)) +
+geom_bar(stat="identity",colour=NA,linewidth=0) +
+  theme_classic() +
+  ylab("Overlaped genes") +
   xlab("Datasets")+theme(axis.text.x = element_text(angle = 90),
      axis.line = element_line(colour = "black"),
      text = element_text(size = 12),
      panel.grid.major = element_blank(),
-  panel.grid.minor = element_blank())+
+  panel.grid.minor = element_blank()) +
   geom_text(aes(label = cc), 
             angle = 45,
-            nudge_y = range/3)
-ggsave("gene_list_Pan_ZGA_barplot.pdf")
+            nudge_y = range/3) +
+  ggtitle("ZGA datasets intersection. \n All categories and all - k")
+
+ggsave("./figures/Pan_ZGA_gene_list_barplot.pdf")
 ```
-
-
 
 
 
@@ -348,22 +357,22 @@ df = as.data.frame(list(Overlap=cc,Datasets=cn))
 
 range = max(df$Overlap) -min(df$Overlap)
 
-ggplot(df, aes(x=fct_inorder(cn), y=cc))+
-geom_bar(stat="identity",colour=NA,linewidth=0)+
+ggplot(df, aes(x=fct_inorder(cn), y=cc)) +
+geom_bar(stat="identity",colour=NA,linewidth=0) +
   theme_classic()+
-  ylab("Overlaped genes")+
+  ylab("Overlaped genes") +
   xlab("Datasets")+theme(axis.text.x = element_text(angle = 90),
      axis.line = element_line(colour = "black"),
      text = element_text(size = 12),
      panel.grid.major = element_blank(),
-  panel.grid.minor = element_blank())+
+  panel.grid.minor = element_blank()) +
   geom_text(aes(label = cc), 
-            angle = 45,
-            nudge_y = range/3)
-ggsave("nVennR_gene_list_polyA_Pan_ZGA_barplot.pdf")
+            angle = 0,
+            nudge_y = range/3) +
+  ggtitle("Strain specific ZGA genes intersection. \n All categories and all - k")
+
+ggsave("./figures/Strain_specific_Pan_ZGA_gene_list_polyA_barplot.pdf")
 ```
-
-
 
 
 ```{r}
@@ -427,13 +436,14 @@ gene_list_polyA_inter_uni <- list(
   "NRs regulated" = unique(toupper(nr5a2_total)),
   "ZGA genes" = unique(toupper(ZGA_genes_all)))
 
-pdf("gene_list_polyA_euler.pdf")
-plot(euler(gene_list_polyA_inter_uni, shape="ellipse"), quantities = TRUE, legend = TRUE)
+pdf("./figures/NRs_Dux_Obox_Pan_ZGA_gene_list_polyA_euler.pdf")
+p = plot(euler(gene_list_polyA_inter_uni, shape="ellipse"), quantities = TRUE, legend = TRUE)
+print(p)
 dev.off()
-plotVenn(nVennR_gene_list_polyA, outFile="gene_list_polyA_nvenn.svg")
+pV = plotVenn(nVennR_gene_list_polyA, outFile="./figures/nVennR_NRs_Dux_Obox_Pan_ZGA_gene_list_polyA.svg")
 
 
-pdf("gene_list_polyA_inter_uni_UpSetR_plot.pdf")
+pdf("./figures/NRs_Dux_Obox_Pan_ZGA_gene_list_polyA_UpSetR_plot.pdf")
 set_size(8, 5)
 size = get_size_mode('exclusive_intersection')
 ComplexUpset::upset(fromList(gene_list_polyA_inter_uni), 
@@ -478,8 +488,6 @@ write.csv(pc, "./Complete_ZGA_genes.csv", row.names=FALSE)
 ```
 
 
-
-
 ```{r}
 a = length(unique(Reduce(c,list(
 unique(Reduce(intersect,list(unique(toupper(nr5a2_total)), unique(toupper(ZGA_genes_all))))),
@@ -503,7 +511,7 @@ data <- data %>%
   mutate(prop = value / sum(data$value) *100) %>%
   mutate(ypos = cumsum(prop)- 0.5*prop )
 
-pdf("ZGA_genes_regulation.pdf")
+pdf("./figures/ZGA_genes_regulation_pie_chart.pdf")
 PieDonut(data, aes(group, count=value),
          ratioByGroup = FALSE)
 dev.off()
