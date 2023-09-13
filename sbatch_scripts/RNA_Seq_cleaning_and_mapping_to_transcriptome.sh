@@ -43,6 +43,10 @@ done
 
 printf '%s\0' "$BASIC_DIR/TrimGalore/"*val*.fq.gz | sort -zV | xargs -0 -n2 sh -c 'a=${1#'$BASIC_DIR'/TrimGalore/}; echo "kallisto quant -b 100 -i [path to index]/mus_musculus/transcriptome.idx -o '${BASIC_DIR}'/Kallisto/${a%_R1_val_1.fq.gz} "$1" "$2""' sh > ${BASIC_DIR}/scripts/kallisto_cmd2.sh
 
+# for single reads please use
+#printf '%s\0' "$BASIC_DIR/TrimGalore/"*val*.fq.gz | sort -zV | xargs -0 -n2 sh -c 'a=${1#'$BASIC_DIR'/TrimGalore/}; echo "kallisto quant -b 100 -i [path to index]/mus_musculus/transcriptome.idx -o '${BASIC_DIR}'/Kallisto/${a%_R1_val_1.fq.gz} --single -l 200 -s 20 "$1" "' sh > ${BASIC_DIR}/scripts/kallisto_cmd2.sh
+
+
 sbatch common_script_transcriptome_kallisto2.sh
 
 while [[ `squeue -u [your id] | wc -l` != 2 ]]
