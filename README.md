@@ -1,6 +1,6 @@
 # Rise and SINE
 
-The scripts provide analysis of ZGA genes and plots generation
+The scripts provide an analysis of ZGA genes and plots generation
 
 1. RNA-Seq analysis and figures N-N generation - RNA_Seq_analysis.Rmd
 2. Figure 1.1 generation - Figure1.1.ipynb
@@ -16,7 +16,7 @@ Make sure that you have installed:
 
 ## Getting started
 
-First of all you have to ```clone``` this directory</br></br>
+First of all, you have to ```clone``` this directory</br></br>
 ```git clone https://github.com/Pavel-Kravchenko/Rise_and_SINE/```</br></br>
 Then ```cd``` in Rise_and_SINE </br></br>
 ```cd Rise_and_SINE```</br></br>
