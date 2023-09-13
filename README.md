@@ -20,7 +20,3 @@ First of all you have to ```clone``` this directory</br></br>
 ```git clone https://github.com/Pavel-Kravchenko/Rise_and_SINE/```</br></br>
 Then ```cd``` in Rise_and_SINE </br></br>
 ```cd Rise_and_SINE```</br></br>
-
-## Contact me
-
-Feel free to contact me: pkravchenko0@biochem.mpg.de
