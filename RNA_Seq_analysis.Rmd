@@ -74,10 +74,10 @@ processRNA_Seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
   
   write.table(txi.kallisto$counts,file=paste0(working_dir, "/txi.kallisto_counts_raw_genes.csv"),row.names=T,quote=F,sep="\t")
   
-  # running DESeq2
-  ddsSalmon <- DESeqDataSetFromTximport(txi.kallisto, colData = samples_methadata, design = ~condition)
-  ddsSalmon <- DESeq(ddsSalmon)
-  fpkmdds = as.data.frame(fpkm(ddsSalmon))
+  # running DESeq2 
+  dds <- DESeqDataSetFromTximport(txi.kallisto, colData = samples_methadata, design = ~condition)
+  dds <- DESeq(dds)
+  fpkmdds = as.data.frame(fpkm(dds))
   fpkmdds$Zygote = apply(fpkmdds[, samples_methadata$sample_name[samples_methadata["condition"] == "Zygote"]],1,mean)
   fpkmdds$`2cell` = apply(fpkmdds[, samples_methadata$sample_name[samples_methadata["condition"] == "2cell"]],1,mean)
   fpkmdds = fpkmdds %>% select(c("Zygote", "2cell"))
@@ -110,7 +110,7 @@ processRNA_Seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
                         all.y=TRUE)
   
   tpmdds = tpmdds[!duplicated(tpmdds), ]
-  myResS <- results(ddsSalmon, contrast = c("condition", "Zygote", "2cell"))
+  myResS <- results(dds, contrast = c("condition", "Zygote", "2cell"))
   myResS <- myResS[order(myResS$pvalue), ]
   myResAsDF <- as.data.frame(myResS)
   myResAsDF$newPadj <- p.adjust(myResAsDF$pvalue, method ="fdr")
@@ -170,6 +170,7 @@ processRNA_Seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
     
     ggsave("./figures/DE_"%+% directory %+%".pdf")
   }
+  return(txi.kallisto$counts)
 }
 ```
 
@@ -178,20 +179,61 @@ processRNA_Seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
 ```{r}
 home = "/Volumes/pool-toti-bioinfo/bioinfo/Pavel.Kravchenko"
 
-gtf.gr = rtracklayer::import("./mus_musculus/Mus_musculus.GRCm38.96.gtf")
+#gtf.gr = rtracklayer::import("./mus_musculus/Mus_musculus.GRCm38.96.gtf")
 
-processRNA_Seq(home, "ZGA_Gassler_et_al_C57BL_6J_GSE178638_paired_polyA", gtf.gr)
-processRNA_Seq(home, "ZGA_Gassler_et_al_B6xCAST_GSE178638_paired_polyA", gtf.gr)
-processRNA_Seq(home, "ZGA_Ji_et_al_C57BL_6_GSE215813_paired_polyA", gtf.gr)
-processRNA_Seq(home, "ZGA_Yu_et_al_ICR_GSE71257_paired_polyA", gtf.gr)
-processRNA_Seq(home, "ZGA_Wu_et_al_C57BL_6NxDBA_2N_GSE66582_paired_polyA", gtf.gr)
-processRNA_Seq(home, "ZGA_Chen_et_al_B6D2F1_GSE121746_single_polyA", gtf.gr)
-processRNA_Seq(home, "ZGA_Deng_et_al_CAST_EiJxC57BL_6J_GSE45719_single_polyA", gtf.gr)
-processRNA_Seq(home, "ZGA_Guo_et_al_C57BL_6_GSE134832_paired_polyA", gtf.gr)
-processRNA_Seq(home, "ZGA_Zhang_et_al_C57BL_6NxPWK_PhJ_GSE71434_paired_polyA", gtf.gr)
-processRNA_Seq(home, "ZGA_Zhang_et_al_B6D2F1_J_GSE169632_paired_total", gtf.gr)
+cnt1 = processRNA_Seq(home, "ZGA_Gassler_et_al_C57BL_6J_GSE178638_paired_polyA", gtf.gr)
+cnt2 = processRNA_Seq(home, "ZGA_Gassler_et_al_B6xCAST_GSE178638_paired_polyA", gtf.gr)
+cnt3 = processRNA_Seq(home, "ZGA_Ji_et_al_C57BL_6_GSE215813_paired_polyA", gtf.gr)
+cnt4 = processRNA_Seq(home, "ZGA_Yu_et_al_ICR_GSE71257_paired_polyA", gtf.gr)
+cnt5 = processRNA_Seq(home, "ZGA_Wu_et_al_C57BL_6NxDBA_2N_GSE66582_paired_polyA", gtf.gr)
+cnt6 = processRNA_Seq(home, "ZGA_Chen_et_al_B6D2F1_GSE121746_single_polyA", gtf.gr)
+cnt7 = processRNA_Seq(home, "ZGA_Deng_et_al_CAST_EiJxC57BL_6J_GSE45719_single_polyA", gtf.gr)
+cnt8 = processRNA_Seq(home, "ZGA_Guo_et_al_C57BL_6_GSE134832_paired_polyA", gtf.gr)
+cnt9 = processRNA_Seq(home, "ZGA_Zhang_et_al_C57BL_6NxPWK_PhJ_GSE71434_paired_polyA", gtf.gr)
+cnt10 = processRNA_Seq(home, "ZGA_Zhang_et_al_B6D2F1_J_GSE169632_paired_total", gtf.gr)
 ```
 
+# Checking integrity
+```{r}
+
+df_vector = list(cnt1, cnt2, cnt3, cnt4, cnt5, cnt6, cnt7, cnt8, cnt9, cnt10) 
+names_vector = c(rep("Gassler_et_al_C57BL_6J", ncol(cnt1)), 
+                 rep("Gassler_et_al_B6xCAST", ncol(cnt2)), 
+                 rep("Ji_et_al_C57BL_6", ncol(cnt3)), 
+                 rep("Yu_et_al_ICR", ncol(cnt4)), 
+                 rep("Wu_et_al_C57BL_6NxDBA_2N", ncol(cnt5)), 
+                 rep("Chen_et_al_B6D2F1", ncol(cnt6)), 
+                 rep("Deng_et_al_CAST_EiJxC57BL_6J", ncol(cnt7)), # IVF dataset
+                 rep("Guo_et_al_C57BL_6", ncol(cnt8)), 
+                 rep("Zhang_et_al_C57BL_6NxPWK_PhJ", ncol(cnt9)), 
+                 rep("Zhang_et_al_B6D2F1_J (total)", ncol(cnt10)))
+
+
+normalized_list <- lapply(df_vector, function(df) {
+  df[, -1] <- scale(df[, -1])
+  return(df)
+})
+
+
+combined_dataframe <- do.call(cbind, normalized_list)
+
+umap_result <- umap::umap(t(combined_dataframe))
+
+umap_df <- data.frame(UMAP1 = umap_result$layout[, 1],
+                      UMAP2 = umap_result$layout[, 2],
+                      Dataset = names_vector)
+library(RColorBrewer)
+n <- length(df_vector)
+qual_col_pals = brewer.pal.info[brewer.pal.info$category == 'qual',]
+col_vector = unlist(mapply(brewer.pal, qual_col_pals$maxcolors, rownames(qual_col_pals)))
+
+ggplot(umap_df, aes(x = UMAP1, y = UMAP2, color=Dataset)) +
+  geom_point(size=5, alpha=0.5) +
+  labs(title = "UMAP Plot Colored by Dataset") +
+  theme_minimal()+
+  scale_color_manual(values = col_vector)
+ggsave("./figures/UMAP_datasets.pdf")
+```
 
 # Filtering ZGA genes
 ```{r}
@@ -210,43 +252,40 @@ read_and_threshold_ZGA_genes <- function(path, directory, v_1cell_threshold, v_2
   return(annotatedRes)
 }
 
-annotatedRes_C57XBL_6J = read_and_threshold_ZGA_genes(home, "ZGA_Gassler_C57BL_6J", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_B6xCAST = read_and_threshold_ZGA_genes(home, "ZGA_Gassler_B6xCAST", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Hu = read_and_threshold_ZGA_genes(home, "ZGA_Hu_from_Xie", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Shuyan = read_and_threshold_ZGA_genes(home, "ZGA_Obox_Shuyan", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Yu = read_and_threshold_ZGA_genes(home, "ZGA_Yu", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Wang = read_and_threshold_ZGA_genes(home, "ZGA_Wang", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Wu = read_and_threshold_ZGA_genes(home, "ZGA_Wu", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Zhang = read_and_threshold_ZGA_genes(home, "ZGA_Zhang", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Chen = read_and_threshold_ZGA_genes(home, "ZGA_Dux_KO_Chen_single", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Deng = read_and_threshold_ZGA_genes(home, "ZGA_Deng_single", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Guo = read_and_threshold_ZGA_genes(home, "ZGA_Guo", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Zhang_2016 = read_and_threshold_ZGA_genes(home, "ZGA_Zhang_2016", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Gassler_C57XBL_6J = read_and_threshold_ZGA_genes(home, "ZGA_Gassler_et_al_C57BL_6J_GSE178638_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Gassler_B6xCAST = read_and_threshold_ZGA_genes(home, "ZGA_Gassler_et_al_B6xCAST_GSE178638_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Ji = read_and_threshold_ZGA_genes(home, "ZGA_Ji_et_al_C57BL_6_GSE215813_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Yu = read_and_threshold_ZGA_genes(home, "ZGA_Yu_et_al_ICR_GSE71257_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Wu = read_and_threshold_ZGA_genes(home, "ZGA_Wu_et_al_C57BL_6NxDBA_2N_GSE66582_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Zhang_total = read_and_threshold_ZGA_genes(home, "ZGA_Zhang_et_al_B6D2F1_J_GSE169632_paired_total", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Chen = read_and_threshold_ZGA_genes(home, "ZGA_Chen_et_al_B6D2F1_GSE121746_single_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Deng = read_and_threshold_ZGA_genes(home, "ZGA_Deng_et_al_CAST_EiJxC57BL_6J_GSE45719_single_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Guo = read_and_threshold_ZGA_genes(home, "ZGA_Guo_et_al_C57BL_6_GSE134832_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Zhang = read_and_threshold_ZGA_genes(home, "ZGA_Zhang_et_al_C57BL_6NxPWK_PhJ_GSE71434_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
 ```
 
 
 # Overlapping ZGA lists for the mouse strains
 ```{r}
 gene_list <- list(
-  "B6xCAST Gassler" = unique(toupper(annotatedRes_B6xCAST$SYMBOL)),
-  "C57BL_6J Gassler" = unique(toupper(annotatedRes_C57XBL_6J$SYMBOL)),
-  "C57BL_6N Hu from Xie" = unique(toupper(annotatedRes_Hu$SYMBOL)),
-  "C57BL_6 Shuyan" = unique(toupper(annotatedRes_Shuyan$SYMBOL)),
+  "B6xCAST Gassler" = unique(toupper(annotatedRes_Gassler_B6xCAST$SYMBOL)),
+  "C57BL_6J Gassler" = unique(toupper(annotatedRes_Gassler_C57XBL_6J$SYMBOL)),
+  "C57BL_6N Ji" = unique(toupper(annotatedRes_Ji$SYMBOL)),
   "ICR Yu" = unique(toupper(annotatedRes_Yu$SYMBOL)),
-  "B6D2F1_J Wang" = unique(toupper(annotatedRes_Wang$SYMBOL)),
   "C57BL_6NxDBA_2N Wu" = unique(toupper(annotatedRes_Wu$SYMBOL)),
   "B6D2F1 Chen" = unique(toupper(annotatedRes_Chen$SYMBOL)),
   "CAST_EiJxC57BL_6J Deng" = unique(toupper(annotatedRes_Deng$SYMBOL)),
   "B6D2F1_J Zhang" = unique(toupper(annotatedRes_Zhang$SYMBOL)),
+  "B6D2F1_J Zhang (total)" = unique(toupper(annotatedRes_Zhang_total$SYMBOL)),
   "C57BL_6 Guo" = unique(toupper(annotatedRes_Guo$SYMBOL)))
 
 nVennR_gene_list_polyA <- list(
      "B6D2F1 clean (N=1)" = unique(toupper(annotatedRes_Chen$SYMBOL)),
      "ICR clean (1)" = unique(toupper(annotatedRes_Yu$SYMBOL)),
-     "C57BL/6J x mix (N=3)" = unique(Reduce(intersect,list(unique(toupper(annotatedRes_B6xCAST$SYMBOL)),
+     "C57BL/6 x mix (N=3)" = unique(Reduce(intersect,list(unique(toupper(annotatedRes_Gassler_B6xCAST$SYMBOL)),
                                                  unique(toupper(annotatedRes_Wu$SYMBOL)),
-                                              unique(toupper(annotatedRes_Zhang_2016$SYMBOL))))),
-  "C57BL/6J clean (3)" = unique(Reduce(c,list(unique(toupper(annotatedRes_Shuyan$SYMBOL)), unique(toupper(annotatedRes_C57XBL_6J$SYMBOL)),unique(toupper(annotatedRes_Guo$SYMBOL))))),
+                                              unique(toupper(annotatedRes_Zhang$SYMBOL))))),
+  "C57BL/6 clean (3)" = unique(Reduce(c,list(unique(toupper(annotatedRes_Ji$SYMBOL)), unique(toupper(annotatedRes_Gassler_C57XBL_6J$SYMBOL)),unique(toupper(annotatedRes_Guo$SYMBOL))))),
                                        "CAST/EiJxC57BL/6J (N=1)" = unique(toupper(annotatedRes_Deng$SYMBOL))
   )
 
@@ -377,32 +416,34 @@ ggsave("./figures/Strain_specific_Pan_ZGA_gene_list_polyA_barplot.pdf")
 
 ```{r}
 nVennR_gene_list_polyA <- list(
-  "C57BL/6J clean (N=3)" = unique(Reduce(c,list(unique(toupper(annotatedRes_Shuyan$SYMBOL)), unique(toupper(annotatedRes_C57XBL_6J$SYMBOL)),unique(toupper(annotatedRes_Guo$SYMBOL))))),
-  "C57BL/6J x mix (N=3)" = unique(Reduce(intersect,list(unique(toupper(annotatedRes_B6xCAST$SYMBOL)),
+  "C57BL/6 clean (N=3)" = unique(Reduce(c,list(unique(toupper(annotatedRes_Ji$SYMBOL)), unique(toupper(annotatedRes_Gassler_C57XBL_6J$SYMBOL)),unique(toupper(annotatedRes_Guo$SYMBOL))))),
+  "C57BL/6 x mix (N=3)" = unique(Reduce(intersect,list(unique(toupper(annotatedRes_Gassler_B6xCAST$SYMBOL)),
                                                  unique(toupper(annotatedRes_Wu$SYMBOL)),
-                                              unique(toupper(annotatedRes_Zhang_2016$SYMBOL))))),
+                                              unique(toupper(annotatedRes_Zhang$SYMBOL))))),
   "CAST/EiJxC57BL/6J (N=1)" = unique(toupper(annotatedRes_Deng$SYMBOL)),
   "B6D2F1 clean (N=1)" = unique(toupper(annotatedRes_Chen$SYMBOL)),
   "ICR clean (N=1)" = unique(toupper(annotatedRes_Yu$SYMBOL))
   )
 
-ZGA_Chen_et_al <- file.path("./41588_2019_418_MOESM3_ESM.xlsx")
-ZGA_Chen_et_al <- read_xlsx(ZGA_Chen_et_al, sheet=2)
-ZGA_Chen_et_al = ZGA_Chen_et_al[which(ZGA_Chen_et_al$...17 == "down-regulated"),]
-Chen_et_al_Dux_targets = ZGA_Chen_et_al[["...1"]] #[-c(1,2)]
+Dux_KO <- file.path("./tables/41588_2019_418_MOESM3_ESM.xlsx")
+Dux_KO <- read_xlsx(Dux_KO, sheet=2)
+Dux_KO = Dux_KO[which(Dux_KO$...17 == "down-regulated"),]
+Dux_KO = Dux_KO[["...1"]] #[-c(1,2)]
 
-res_mm = read.delim("./science.abn7478_table_s6.csv", sep = ";")
-nr5a2_kd = unique(res_mm[which(res_mm$State == "DOWN"),]$gene_id)
+res_mm = read.delim("./tables/science.abn7478_table_s6.csv", sep = ";")
+Nr5a2_KD = unique(res_mm[which(res_mm$State == "DOWN"),]$gene_id)
 
-res_mm = read.delim("./science.abn7478_table_s5.csv", sep = ";")
-nr5a2_cmps = unique(res_mm[which(res_mm$State == "DOWN"),]$gene_id)
+res_mm = read.delim("./tables/science.abn7478_table_s5.csv", sep = ";")
+Nr5a2_SR1848 = unique(res_mm[which(res_mm$State == "DOWN"),]$gene_id)
 
-nr5a2_total = unique(Reduce(c,list(unique(toupper(nr5a2_cmps)), unique(nr5a2_kd))))
+Nr5a2_total = unique(Reduce(c,list(unique(toupper(Nr5a2_SR1848)), unique(Nr5a2_KD))))
 
-res_mm = read.delim("./41586_2023_6428_MOESM3_ESM.csv", sep = ";")
-OBOX_KO = unique(res_mm[which(res_mm$Group == "down-regulated"),]$gene.name)
+res_mm = read.delim("./tables/41586_2023_6428_MOESM3_ESM.csv", sep = ";")
+Obox_KO = unique(res_mm[which(res_mm$Group == "down-regulated"),]$gene.name)
 
 df2 <- data.frame(gene=unique(unlist(nVennR_gene_list_polyA)))
+write.csv(df2, "./ZGA_genes_summary_table.csv", row.names=FALSE)
+
 df1 <- lapply(nVennR_gene_list_polyA,function(x){
   data.frame(gene = x)
 }) %>% 
@@ -431,9 +472,9 @@ df_int %>%
   arrange(desc(n))
 
 gene_list_polyA_inter_uni <- list(
-  "Dux regulated" = unique(toupper(Chen_et_al_Dux_targets)),
-  "Obox regulated" = unique(toupper(OBOX_KO)),
-  "NRs regulated" = unique(toupper(nr5a2_total)),
+  "Dux regulated" = unique(toupper(Dux_KO)),
+  "Obox regulated" = unique(toupper(Obox_KO)),
+  "NRs regulated" = unique(toupper(Nr5a2_total)),
   "ZGA genes" = unique(toupper(ZGA_genes_all)))
 
 pdf("./figures/NRs_Dux_Obox_Pan_ZGA_gene_list_polyA_euler.pdf")
@@ -481,8 +522,10 @@ ComplexUpset::upset(fromList(gene_list_polyA_inter_uni),
         ) 
 dev.off()
 
-write.csv(pc[pc$cnt > 3, ], "./Pan_ZGA_genes.csv", row.names=FALSE)
-write.csv(pc[pc$cnt == 5, ], "./Common_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc[pc$cnt > 3, ], "./Pan_4_degre_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc[pc$cnt > 2, ], "./Pan_3_degree_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc[pc$cnt > 1, ], "./Pan_2_degree_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc[pc$cnt == 5, ], "./Core_ZGA_genes.csv", row.names=FALSE)
 write.csv(pc, "./Complete_ZGA_genes.csv", row.names=FALSE)
 
 ```
@@ -490,9 +533,9 @@ write.csv(pc, "./Complete_ZGA_genes.csv", row.names=FALSE)
 
 ```{r}
 a = length(unique(Reduce(c,list(
-unique(Reduce(intersect,list(unique(toupper(nr5a2_total)), unique(toupper(ZGA_genes_all))))),
-unique(Reduce(intersect,list(unique(toupper(Chen_et_al_Dux_targets)), unique(toupper(ZGA_genes_all))))),
-unique(Reduce(intersect,list(unique(toupper(OBOX_KO)), unique(toupper(ZGA_genes_all)))))
+unique(Reduce(intersect,list(unique(toupper(Nr5a2_total)), unique(toupper(ZGA_genes_all))))),
+unique(Reduce(intersect,list(unique(toupper(Dux_KO)), unique(toupper(ZGA_genes_all))))),
+unique(Reduce(intersect,list(unique(toupper(Obox_KO)), unique(toupper(ZGA_genes_all)))))
 ))))/length(unique(toupper(ZGA_genes_all)))
 
 b = 1-a
