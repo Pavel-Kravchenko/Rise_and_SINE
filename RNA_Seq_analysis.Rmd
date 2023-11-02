@@ -143,7 +143,7 @@ processRNA_Seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
                         all.x=TRUE,
                         all.y=FALSE)
   
-  write.table(annotatedRes_fpkmdds,file=paste0(working_dir, "/annotatedRes_log2FC_" %+% directory %+% "_genes.csv"),row.names=T,quote=F,sep="\t")
+  write.table(annotatedRes_fpkmdds,file=paste0("./tables/annotatedRes_log2FC_" %+% directory %+% "_genes.csv"),row.names=T,quote=F,sep="\t")
   
   if (plot_volcanoplot == T) {
     
@@ -181,34 +181,30 @@ processRNA_Seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
 ```{r}
 home = "/Volumes/pool-toti-bioinfo/bioinfo/Pavel.Kravchenko"
 
-#gtf.gr = rtracklayer::import("./mus_musculus/Mus_musculus.GRCm38.96.gtf")
+gtf.gr = rtracklayer::import("./mus_musculus/Mus_musculus.GRCm38.96.gtf")
 
 cnt1 = processRNA_Seq(home, "ZGA_Gassler_et_al_C57BL_6J_GSE178638_paired_polyA", gtf.gr)
 cnt2 = processRNA_Seq(home, "ZGA_Gassler_et_al_B6xCAST_GSE178638_paired_polyA", gtf.gr)
 cnt3 = processRNA_Seq(home, "ZGA_Ji_et_al_C57BL_6_GSE215813_paired_polyA", gtf.gr)
-cnt4 = processRNA_Seq(home, "ZGA_Yu_et_al_ICR_GSE71257_paired_polyA", gtf.gr)
-cnt5 = processRNA_Seq(home, "ZGA_Wu_et_al_C57BL_6NxDBA_2N_GSE66582_paired_polyA", gtf.gr)
-cnt6 = processRNA_Seq(home, "ZGA_Chen_et_al_B6D2F1_GSE121746_single_polyA", gtf.gr)
-cnt7 = processRNA_Seq(home, "ZGA_Deng_et_al_CAST_EiJxC57BL_6J_GSE45719_single_polyA", gtf.gr)
-cnt8 = processRNA_Seq(home, "ZGA_Guo_et_al_C57BL_6_GSE134832_paired_polyA", gtf.gr)
-cnt9 = processRNA_Seq(home, "ZGA_Zhang_et_al_C57BL_6NxPWK_PhJ_GSE71434_paired_polyA", gtf.gr)
-cnt10 = processRNA_Seq(home, "ZGA_Zhang_et_al_B6D2F1_J_GSE169632_paired_total", gtf.gr)
+cnt4 = processRNA_Seq(home, "ZGA_Wu_et_al_C57BL_6NxDBA_2N_GSE66582_paired_polyA", gtf.gr)
+cnt5 = processRNA_Seq(home, "ZGA_Chen_et_al_B6D2F1_GSE121746_single_polyA", gtf.gr)
+cnt6 = processRNA_Seq(home, "ZGA_Deng_et_al_CAST_EiJxC57BL_6J_GSE45719_single_polyA", gtf.gr)
+cnt7 = processRNA_Seq(home, "ZGA_Guo_et_al_C57BL_6_GSE134832_paired_polyA", gtf.gr)
+cnt8 = processRNA_Seq(home, "ZGA_Zhang_et_al_C57BL_6NxPWK_PhJ_GSE71434_paired_polyA", gtf.gr)
 ```
 
 # Checking integrity
 ```{r}
 
-df_vector = list(cnt1, cnt2, cnt3, cnt4, cnt5, cnt6, cnt7, cnt8, cnt9, cnt10) 
+df_vector = list(cnt1, cnt2, cnt3, cnt4, cnt5, cnt6, cnt7, cnt8) 
 names_vector = c(rep("Gassler_et_al_C57BL_6J", ncol(cnt1)), 
                  rep("Gassler_et_al_B6xCAST", ncol(cnt2)), 
-                 rep("Ji_et_al_C57BL_6", ncol(cnt3)), 
-                 rep("Yu_et_al_ICR", ncol(cnt4)), 
-                 rep("Wu_et_al_C57BL_6NxDBA_2N", ncol(cnt5)), 
-                 rep("Chen_et_al_B6D2F1", ncol(cnt6)), 
-                 rep("Deng_et_al_CAST_EiJxC57BL_6J", ncol(cnt7)), # IVF dataset
-                 rep("Guo_et_al_C57BL_6", ncol(cnt8)), 
-                 rep("Zhang_et_al_C57BL_6NxPWK_PhJ", ncol(cnt9)), 
-                 rep("Zhang_et_al_B6D2F1_J (total)", ncol(cnt10)))
+                 rep("Ji_et_al_C57BL_6", ncol(cnt3)),
+                 rep("Wu_et_al_C57BL_6NxDBA_2N", ncol(cnt4)), 
+                 rep("Chen_et_al_B6D2F1", ncol(cnt5)), 
+                 rep("Deng_et_al_CAST_EiJxC57BL_6J", ncol(cnt6)), # IVF dataset
+                 rep("Guo_et_al_C57BL_6", ncol(cnt7)), 
+                 rep("Zhang_et_al_C57BL_6NxPWK_PhJ", ncol(cnt8)))
 
 
 normalized_list <- lapply(df_vector, function(df) {
@@ -246,24 +242,23 @@ v_2cell_threshold = 5
 v_pval_threshold = 0.05
 log2FoldChange_threshold = 2
 home = "/Volumes/pool-toti-bioinfo/bioinfo/Pavel.Kravchenko"
+tables = "/Users/pavel/Desktop/Rise_and_SINE/tables"
 
 read_and_threshold_ZGA_genes <- function(path, directory, v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold){
-  working_dir = path %+% "/" %+% directory
+  working_dir = path #%+% "/" %+% directory
   annotatedRes = read.csv(file=paste0(working_dir, "/annotatedRes_log2FC_" %+% directory %+% "_genes.csv"),sep="\t")
   annotatedRes %<>% dplyr::filter((log2FoldChange < log2FoldChange_threshold) & (newPadj < v_pval_threshold) & (Zygote_FPKM > v_1cell_threshold) & (X2cell_FPKM > v_2cell_threshold))
   return(annotatedRes)
 }
 
-annotatedRes_Gassler_C57XBL_6J = read_and_threshold_ZGA_genes(home, "ZGA_Gassler_et_al_C57BL_6J_GSE178638_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Gassler_B6xCAST = read_and_threshold_ZGA_genes(home, "ZGA_Gassler_et_al_B6xCAST_GSE178638_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Ji = read_and_threshold_ZGA_genes(home, "ZGA_Ji_et_al_C57BL_6_GSE215813_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Yu = read_and_threshold_ZGA_genes(home, "ZGA_Yu_et_al_ICR_GSE71257_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Wu = read_and_threshold_ZGA_genes(home, "ZGA_Wu_et_al_C57BL_6NxDBA_2N_GSE66582_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Zhang_total = read_and_threshold_ZGA_genes(home, "ZGA_Zhang_et_al_B6D2F1_J_GSE169632_paired_total", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Chen = read_and_threshold_ZGA_genes(home, "ZGA_Chen_et_al_B6D2F1_GSE121746_single_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Deng = read_and_threshold_ZGA_genes(home, "ZGA_Deng_et_al_CAST_EiJxC57BL_6J_GSE45719_single_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Guo = read_and_threshold_ZGA_genes(home, "ZGA_Guo_et_al_C57BL_6_GSE134832_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
-annotatedRes_Zhang = read_and_threshold_ZGA_genes(home, "ZGA_Zhang_et_al_C57BL_6NxPWK_PhJ_GSE71434_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Gassler_C57XBL_6J = read_and_threshold_ZGA_genes(tables, "ZGA_Gassler_et_al_C57BL_6J_GSE178638_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Gassler_B6xCAST = read_and_threshold_ZGA_genes(tables, "ZGA_Gassler_et_al_B6xCAST_GSE178638_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Ji = read_and_threshold_ZGA_genes(tables, "ZGA_Ji_et_al_C57BL_6_GSE215813_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Wu = read_and_threshold_ZGA_genes(tables, "ZGA_Wu_et_al_C57BL_6NxDBA_2N_GSE66582_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Chen = read_and_threshold_ZGA_genes(tables, "ZGA_Chen_et_al_B6D2F1_GSE121746_single_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Deng = read_and_threshold_ZGA_genes(tables, "ZGA_Deng_et_al_CAST_EiJxC57BL_6J_GSE45719_single_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Guo = read_and_threshold_ZGA_genes(tables, "ZGA_Guo_et_al_C57BL_6_GSE134832_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
+annotatedRes_Zhang = read_and_threshold_ZGA_genes(tables, "ZGA_Zhang_et_al_C57BL_6NxPWK_PhJ_GSE71434_paired_polyA", v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold)
 ```
 
 
@@ -273,22 +268,22 @@ gene_list <- list(
   "B6xCAST Gassler" = unique(toupper(annotatedRes_Gassler_B6xCAST$SYMBOL)),
   "C57BL_6J Gassler" = unique(toupper(annotatedRes_Gassler_C57XBL_6J$SYMBOL)),
   "C57BL_6N Ji" = unique(toupper(annotatedRes_Ji$SYMBOL)),
-  "ICR Yu" = unique(toupper(annotatedRes_Yu$SYMBOL)),
   "C57BL_6NxDBA_2N Wu" = unique(toupper(annotatedRes_Wu$SYMBOL)),
   "B6D2F1 Chen" = unique(toupper(annotatedRes_Chen$SYMBOL)),
   "CAST_EiJxC57BL_6J Deng" = unique(toupper(annotatedRes_Deng$SYMBOL)),
   "B6D2F1_J Zhang" = unique(toupper(annotatedRes_Zhang$SYMBOL)),
-  "B6D2F1_J Zhang (total)" = unique(toupper(annotatedRes_Zhang_total$SYMBOL)),
   "C57BL_6 Guo" = unique(toupper(annotatedRes_Guo$SYMBOL)))
 
+
 nVennR_gene_list_polyA <- list(
-     "B6D2F1 clean (N=1)" = unique(toupper(annotatedRes_Chen$SYMBOL)),
-     "ICR clean (1)" = unique(toupper(annotatedRes_Yu$SYMBOL)),
+     "B6D2F1 pure (N=1)" = unique(toupper(annotatedRes_Chen$SYMBOL)),
      "C57BL/6 x mix (N=3)" = unique(Reduce(intersect,list(unique(toupper(annotatedRes_Gassler_B6xCAST$SYMBOL)),
-                                                 unique(toupper(annotatedRes_Wu$SYMBOL)),
+                                              unique(toupper(annotatedRes_Wu$SYMBOL)),
                                               unique(toupper(annotatedRes_Zhang$SYMBOL))))),
-  "C57BL/6 clean (3)" = unique(Reduce(c,list(unique(toupper(annotatedRes_Ji$SYMBOL)), unique(toupper(annotatedRes_Gassler_C57XBL_6J$SYMBOL)),unique(toupper(annotatedRes_Guo$SYMBOL))))),
-                                       "CAST/EiJxC57BL/6J (N=1)" = unique(toupper(annotatedRes_Deng$SYMBOL))
+     "C57BL/6 pure (N=3)" = unique(Reduce(c,list(unique(toupper(annotatedRes_Ji$SYMBOL)),
+                                          unique(toupper(annotatedRes_Gassler_C57XBL_6J$SYMBOL)),
+                                          unique(toupper(annotatedRes_Guo$SYMBOL))))),
+  "CAST/EiJxC57BL/6J (N=1)" = unique(toupper(annotatedRes_Deng$SYMBOL))
   )
 
 pdf("./figures/nVennR_gene_list_polyA.pdf")
@@ -348,16 +343,17 @@ dev.off()
 
 # Selectiong Pan ZGA list
 $$
-Pan \ ZGA \ list = \bigcup_{ \forall k ∈𝔸}^{} (\bigcap_{\forall \alpha ∈𝔸} ZGA \ list \ \alpha, \bigcap_{ \forall \alpha ∈𝔸\backslash k} ZGA \ list \ \alpha), \ where \ 𝔸 \ is \ a \ set \ of \ ZGA \ datasets
+Pan \ ZGA \ list = \{ \bigcap_{\alpha = 1}^{𝔸} Z \alpha\} \bigcup_{}^{} \{\bigcup_{\alpha = 1}^{𝔸}\{\bigcap_{ \alpha \neq k \atop \forall \alpha ∈𝔸} Z \alpha\}\}, \ where \ 𝔸 \ is \ a \ set \ of \ ZGA \ datasets \ Z1, Z2, ... ,Zn
 $$
+
 
 # Checking Pan categories
 ```{r}
-cc = c(nrow(fromList(gene_list)[apply(fromList(gene_list),1,sum) == 10, ]))
+cc = c(nrow(fromList(gene_list)[apply(fromList(gene_list),1,sum) == 8, ]))
 
 for (i in seq(length(gene_list))){
   print(i)
-  cc = c(cc, nrow(fromList(gene_list[- i])[apply(fromList(gene_list[- i]),1,sum) > 8, ]))
+  cc = c(cc, nrow(fromList(gene_list[- i])[apply(fromList(gene_list[- i]),1,sum) > 6, ]))
 }
 
 cn = c("All", paste0("-",names(gene_list)))
@@ -386,11 +382,11 @@ ggsave("./figures/Pan_ZGA_gene_list_barplot.pdf")
 
 # Checking Pan categories
 ```{r}
-cc = c(nrow(fromList(nVennR_gene_list_polyA)[apply(fromList(nVennR_gene_list_polyA),1,sum) > 3, ]))
+cc = c(nrow(fromList(nVennR_gene_list_polyA)[apply(fromList(nVennR_gene_list_polyA),1,sum) == 4, ]))
 
 for (i in seq(length(nVennR_gene_list_polyA))){
   print(i)
-  cc = c(cc, nrow(fromList(nVennR_gene_list_polyA[- i])[apply(fromList(nVennR_gene_list_polyA[- i]),1,sum) > 3, ]))
+  cc = c(cc, nrow(fromList(nVennR_gene_list_polyA[- i])[apply(fromList(nVennR_gene_list_polyA[- i]),1,sum) > 2, ]))
 }
 
 cn = c("All", paste0("-",names(nVennR_gene_list_polyA)))
@@ -418,30 +414,37 @@ ggsave("./figures/Strain_specific_Pan_ZGA_gene_list_polyA_barplot.pdf")
 
 ```{r}
 nVennR_gene_list_polyA <- list(
-  "C57BL/6 clean (N=3)" = unique(Reduce(c,list(unique(toupper(annotatedRes_Ji$SYMBOL)), unique(toupper(annotatedRes_Gassler_C57XBL_6J$SYMBOL)),unique(toupper(annotatedRes_Guo$SYMBOL))))),
-  "C57BL/6 x mix (N=3)" = unique(Reduce(intersect,list(unique(toupper(annotatedRes_Gassler_B6xCAST$SYMBOL)),
-                                                 unique(toupper(annotatedRes_Wu$SYMBOL)),
+     "B6D2F1 pure (N=1)" = unique(toupper(annotatedRes_Chen$SYMBOL)),
+     "C57BL/6 x mix (N=3)" = unique(Reduce(intersect,list(unique(toupper(annotatedRes_Gassler_B6xCAST$SYMBOL)),
+                                              unique(toupper(annotatedRes_Wu$SYMBOL)),
                                               unique(toupper(annotatedRes_Zhang$SYMBOL))))),
-  "CAST/EiJxC57BL/6J (N=1)" = unique(toupper(annotatedRes_Deng$SYMBOL)),
-  "B6D2F1 clean (N=1)" = unique(toupper(annotatedRes_Chen$SYMBOL)),
-  "ICR clean (N=1)" = unique(toupper(annotatedRes_Yu$SYMBOL))
+     "C57BL/6 pure (N=3)" = unique(Reduce(c,list(unique(toupper(annotatedRes_Ji$SYMBOL)),
+                                          unique(toupper(annotatedRes_Gassler_C57XBL_6J$SYMBOL)),
+                                          unique(toupper(annotatedRes_Guo$SYMBOL))))),
+  "CAST/EiJxC57BL/6J (N=1)" = unique(toupper(annotatedRes_Deng$SYMBOL))
   )
 
 Dux_KO <- file.path("./tables/41588_2019_418_MOESM3_ESM.xlsx")
 Dux_KO <- read_xlsx(Dux_KO, sheet=2)
 Dux_KO = Dux_KO[which(Dux_KO$...17 == "down-regulated"),]
-Dux_KO = Dux_KO[["...1"]] #[-c(1,2)]
+Dux_KO = unique(toupper(na.omit(Dux_KO[["...1"]]))) #[-c(1,2)]
+write.csv(Dux_KO, "./tables/Dux_KO_ZGA_genes.csv", row.names=FALSE)
 
 res_mm = read.delim("./tables/science.abn7478_table_s6.csv", sep = ";")
-Nr5a2_KD = unique(res_mm[which(res_mm$State == "DOWN"),]$gene_id)
+Nr5a2_KD = unique(toupper(na.omit(unique(res_mm[which(res_mm$State == "DOWN"),]$gene_id))))
+write.csv(Nr5a2_KD, "./tables/Nr5a2_KD_ZGA_genes.csv", row.names=FALSE)
 
 res_mm = read.delim("./tables/science.abn7478_table_s5.csv", sep = ";")
-Nr5a2_SR1848 = unique(res_mm[which(res_mm$State == "DOWN"),]$gene_id)
+Nr5a2_SR1848 = unique(toupper(na.omit(unique(res_mm[which(res_mm$State == "DOWN"),]$gene_id))))
+write.csv(Nr5a2_SR1848, "./tables/Nr5a2_SR1848_ZGA_genes.csv", row.names=FALSE)
 
-Nr5a2_total = unique(Reduce(c,list(unique(toupper(Nr5a2_SR1848)), unique(Nr5a2_KD))))
+Nr5a2_total = unique(toupper(na.omit(unique(Reduce(c,list(unique(toupper(Nr5a2_SR1848)), unique(Nr5a2_KD)))))))
+write.csv(Nr5a2_total, "./tables/Nr5a2_total_ZGA_genes.csv", row.names=FALSE)
 
 res_mm = read.delim("./tables/41586_2023_6428_MOESM3_ESM.csv", sep = ";")
-Obox_KO = unique(res_mm[which(res_mm$Group == "down-regulated"),]$gene.name)
+Obox_KO = unique(toupper(na.omit(unique(res_mm[which(res_mm$Group == "down-regulated"),]$gene.name))))
+write.csv(Obox_KO, "./tables/Obox_KO_ZGA_genes.csv", row.names=FALSE)
+
 
 df2 <- data.frame(gene=unique(unlist(nVennR_gene_list_polyA)))
 write.csv(df2, "./ZGA_genes_summary_table.csv", row.names=FALSE)
@@ -466,7 +469,7 @@ df_int <- lapply(df2$gene,function(x){
 pc = df_int
 pc$cnt = stringi::stri_count(pc$int, fixed = "|") +1
 
-ZGA_genes_all = pc$gene[pc$cnt > 3]
+ZGA_genes_all = pc$gene[pc$cnt > 2]
 
 df_int %>% 
   group_by(int) %>% 
@@ -479,6 +482,17 @@ gene_list_polyA_inter_uni <- list(
   "NRs regulated" = unique(toupper(Nr5a2_total)),
   "ZGA genes" = unique(toupper(ZGA_genes_all)))
 
+
+p = plot(euler(gene_list_polyA_inter_uni, shape="ellipse"), quantities = TRUE, legend = TRUE)
+print(p)
+
+# calculating individual overlaps
+# length(unique(Reduce(intersect,list(unique(toupper(Dux_KO)), unique(toupper(ZGA_genes_all)))))) #34
+# length(unique(Reduce(intersect,list(unique(toupper(Obox_KO)), unique(toupper(ZGA_genes_all)))))) #404
+# length(unique(Reduce(intersect,list(unique(toupper(Nr5a2_total)), unique(toupper(ZGA_genes_all)))))) #927
+# length(unique(Reduce(intersect,list(unique(toupper(Nr5a2_KD)), unique(toupper(ZGA_genes_all)))))) #122
+# length(unique(Reduce(intersect,list(unique(toupper(Nr5a2_SR1848)), unique(toupper(ZGA_genes_all)))))) #122
+
 pdf("./figures/NRs_Dux_Obox_Pan_ZGA_gene_list_polyA_euler.pdf")
 p = plot(euler(gene_list_polyA_inter_uni, shape="ellipse"), quantities = TRUE, legend = TRUE)
 print(p)
@@ -486,7 +500,7 @@ dev.off()
 pV = plotVenn(nVennR_gene_list_polyA, outFile="./figures/nVennR_NRs_Dux_Obox_Pan_ZGA_gene_list_polyA.svg")
 
 
-pdf("./figures/NRs_Dux_Obox_Pan_ZGA_gene_list_polyA_UpSetR_plot.pdf")
+pdf("./figures/NRs_Dux_Obox_Pan_ZGA_gene_list_polyA_UpSetR_plot_1500.pdf")
 set_size(8, 5)
 size = get_size_mode('exclusive_intersection')
 ComplexUpset::upset(fromList(gene_list_polyA_inter_uni), 
@@ -499,12 +513,14 @@ ComplexUpset::upset(fromList(gene_list_polyA_inter_uni),
                 hjust=-0.1,
                 angle=45,
                 color="black"),
+                mapping=aes(fill='bars_color', colour = "black"),
                 text_mapping=aes(
                 colour=ifelse(!!size > 50, 'on_bar', 'on_background'),
                 y=ifelse(!!size > 50, !!size, !!size)
                 )
               )
-            + ylim(c(0, 5000))
+            + scale_fill_manual(values=c('bars_color'='white'), guide='none')
+            + ylim(c(0, 1500))
             + theme(axis.text=element_text(size=12),
                     axis.title=element_text(size=14), 
                     axis.line = element_line(colour = "black"),
@@ -524,11 +540,56 @@ ComplexUpset::upset(fromList(gene_list_polyA_inter_uni),
         ) 
 dev.off()
 
-write.csv(pc[pc$cnt > 3, ], "./Pan_4_degre_ZGA_genes.csv", row.names=FALSE)
-write.csv(pc[pc$cnt > 2, ], "./Pan_3_degree_ZGA_genes.csv", row.names=FALSE)
-write.csv(pc[pc$cnt > 1, ], "./Pan_2_degree_ZGA_genes.csv", row.names=FALSE)
-write.csv(pc[pc$cnt == 5, ], "./Core_ZGA_genes.csv", row.names=FALSE)
-write.csv(pc, "./Complete_ZGA_genes.csv", row.names=FALSE)
+
+pdf("./figures/NRs_Dux_Obox_Pan_ZGA_gene_list_polyA_UpSetR_plot_5000.pdf")
+set_size(8, 5)
+size = get_size_mode('exclusive_intersection')
+ComplexUpset::upset(fromList(gene_list_polyA_inter_uni), 
+                    names(gene_list_polyA_inter_uni), 
+                    width_ratio=0.1,
+                    base_annotations = list(
+        'Intersection size'=(
+            intersection_size(text=list(
+                vjust=-0.1,
+                hjust=-0.1,
+                angle=45,
+                color="black"),
+                #mapping=aes(fill=F),
+                mapping=aes(fill='bars_color', colour = "black"),
+                text_mapping=aes(
+                colour=ifelse(!!size > 50, 'on_bar', 'on_background'),
+                y=ifelse(!!size > 50, !!size, !!size)
+                )
+              )
+            + scale_fill_manual(values=c('bars_color'='white'), guide='none')
+            + ylim(c(0, 5000))
+            + theme(axis.text=element_text(size=12),
+                    axis.title=element_text(size=14), 
+                    axis.line = element_line(colour = "black"),
+                    panel.grid.major = element_blank(),
+                    panel.grid.minor = element_blank(),
+                    axis.ticks.x=element_line(),
+                    axis.ticks.y=element_line()) 
+            + ylab('Overlapped genes')
+        )
+    ),
+    sort_sets=F,
+    set_sizes=(upset_set_size() + theme(axis.text.x=element_text(angle=90))
+        + ylab('set size')
+        ),
+    stripes='white', 
+    sort_intersections_by=c('degree', 'cardinality')
+    
+
+        ) 
+dev.off()
+
+
+write.csv(pc[pc$cnt > 2, ], "./tables/Pan_1_degree_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc[pc$cnt > 1, ], "./tables/Pan_2_degree_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc[pc$cnt > 0, ], "./tables/Pan_3_degree_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc[pc$cnt == 4, ], "./tables/Core_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc, "./tables/Complete_ZGA_genes.csv", row.names=FALSE)
 
 ```
 
