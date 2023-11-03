@@ -2,7 +2,7 @@
 
 The scripts provide an analysis of ZGA genes and plots generation
 
-1. RNA-Seq analysis and figures N-N generation - RNA_Seq_analysis.Rmd
+1. RNA-Seq analysis and figures generation - RNA_Seq_analysis.Rmd
 2. Figure 1.1 generation - Figure1.1.ipynb
 3. Figure 1.2 generation - Figure2.1.ipynb
 
