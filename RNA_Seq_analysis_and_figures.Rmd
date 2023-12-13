@@ -275,6 +275,7 @@ gene_list <- list(
   "C57BL_6 Guo" = unique(toupper(annotatedRes_Guo$SYMBOL)))
 
 conflicts_prefer(base::intersect)
+
 nVennR_gene_list_polyA <- list(
      "B6D2F1 pure (N=1)" = unique(toupper(annotatedRes_Chen$SYMBOL)),
      "C57BL/6 x mix (N=3)" = unique(Reduce(intersect,list(unique(toupper(annotatedRes_Gassler_B6xCAST$SYMBOL)),
@@ -344,6 +345,7 @@ dev.off()
 # Selectiong Pan ZGA list
 $$
 Pan \ ZGA \ list = \{ \bigcap_{\alpha = 1}^{𝔸} Z \alpha\} \bigcup_{}^{} \{\bigcup_{k= 1}^{𝔸}\{\bigcap_{ \alpha \neq k \atop \forall \alpha ∈𝔸} Z \alpha\}\}, \ where \ 𝔸 \ is \ a \ set \ of \ ZGA \ datasets \ Z1, Z2, ... ,Zn
+
 $$
 
 
@@ -583,6 +585,7 @@ ComplexUpset::upset(fromList(gene_list_polyA_inter_uni),
 
         ) 
 dev.off()
+
 
 colnames(pc) = c("Gene_id", "Intersection_category", "Intersection_count")
 write.csv(pc[pc$Intersection_count > 2, ], "./Pan_ZGA_lists/Pan_1_degree_ZGA_genes.csv", row.names=FALSE)

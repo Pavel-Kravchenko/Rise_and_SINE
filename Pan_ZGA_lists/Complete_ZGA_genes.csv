@@ -1,4 +1,4 @@
-"Gene_id","Intersection_category","Intersection_count"
+"Gene_id","Intersection_category","Intersection_count (Pan ZGA > 2)"
 "0610010F05RIK","B6D2F1 pure (N=1)",1
 "0610012G03RIK","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
 "1110004F10RIK","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)",2
