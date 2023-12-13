@@ -1,0 +1,68 @@
+ruby: warning: shebang line ending with \r may cause problems
+ru.autosome.ChIPHorde engine usage: <start_length1:stop_length1,start_length2:stop_length2..start_lengthN:stop_lengthN> <mode=(m)ask|(f)ilter|(d)ummy> <verbose=(n)o|(p)artial|(y)es> <ru.autosome.ChIPMunk parameters>
+ru.autosome.ChIPAct engine usage: <length> <s:simple_set> <o:ordered_set> <w:weighted_set> <p:peak_set> <m:summit_set> <r:rna_set> [<try_limit>=100] [<step_limit>=10>] [<iter_limit>=1] [<thread_count>=1] [<seeds_set>=random|filename.mfa] [<gc%>=0.5|auto] [<motif_shape>=flat|single|double] [<disable_log_weighting>]
+using logarithmic sets weighting
+using 3595 sequences
+gathering seeds...
+gathered 400 seeds
+starting 0-th iteration, FILTER mode
+ru.autosome.ChIPMunk usage: <start_length> <stop_length> <verbose=(n)o|(y)es> <mode=(o)ops|zoops_factor=1.0|0.0> <ru.autosome.ChIPAct parameters>
+trying motif length: 300
+ru.autosome.ChIPAct engine usage: <length> <s:simple_set> <o:ordered_set> <w:weighted_set> <p:peak_set> <m:summit_set> <r:rna_set> [<try_limit>=100] [<step_limit>=10>] [<iter_limit>=1] [<thread_count>=1] [<seeds_set>=random|filename.mfa] [<gc%>=0.5|auto] [<motif_shape>=flat|single|double] [<disable_log_weighting>]
+using logarithmic sets weighting
+using 2884 sequences
+gathering seeds...
+gathered 400 seeds
+found new GMLA with higher KDIC 0.61088619556535 > 0.0
+found new GMLA with higher KDIC 0.6622781989952021 > 0.61088619556535
+found new GMLA with higher KDIC 0.7144840703923542 > 0.6622781989952021
+overall progress: 4% complete (motif discovery, length 300: 10.0% complete)
+overall progress: 10% complete (motif discovery, length 300: 20.0% complete)
+overall progress: 15% complete (motif discovery, length 300: 30.0% complete)
+overall progress: 21% complete (motif discovery, length 300: 40.0% complete)
+overall progress: 26% complete (motif discovery, length 300: 50.0% complete)
+overall progress: 32% complete (motif discovery, length 300: 60.0% complete)
+overall progress: 37% complete (motif discovery, length 300: 70.0% complete)
+overall progress: 43% complete (motif discovery, length 300: 80.0% complete)
+overall progress: 49% complete (motif discovery, length 300: 90.0% complete)
+success; best KDIC 0.7144840703923542
+checking motif strength...
+applying ZOOPS segmentation procedure...
+ZOOPS detected motif in 2052 sequences of 2884
+found strong motif, saving
+found motif of the maximal allowed length 300; please, check input parameters
+estimating P-value...
+starting 1-th iteration, FILTER mode
+ru.autosome.ChIPMunk usage: <start_length> <stop_length> <verbose=(n)o|(y)es> <mode=(o)ops|zoops_factor=1.0|0.0> <ru.autosome.ChIPAct parameters>
+trying motif length: 300
+ru.autosome.ChIPAct engine usage: <length> <s:simple_set> <o:ordered_set> <w:weighted_set> <p:peak_set> <m:summit_set> <r:rna_set> [<try_limit>=100] [<step_limit>=10>] [<iter_limit>=1] [<thread_count>=1] [<seeds_set>=random|filename.mfa] [<gc%>=0.5|auto] [<motif_shape>=flat|single|double] [<disable_log_weighting>]
+sequence sets before filtering: 1
+sequence sets after filtering: 1
+using logarithmic sets weighting
+using 826 sequences
+gathering seeds...
+gathered 400 seeds
+found new GMLA with higher KDIC 0.5136834057754224 > 0.0
+found new GMLA with higher KDIC 0.5325802810754061 > 0.5136834057754224
+overall progress: 54% complete (motif discovery, length 300: 10.0% complete)
+overall progress: 60% complete (motif discovery, length 300: 20.0% complete)
+overall progress: 65% complete (motif discovery, length 300: 30.0% complete)
+overall progress: 71% complete (motif discovery, length 300: 40.0% complete)
+overall progress: 76% complete (motif discovery, length 300: 50.0% complete)
+overall progress: 82% complete (motif discovery, length 300: 60.0% complete)
+overall progress: 87% complete (motif discovery, length 300: 70.0% complete)
+overall progress: 93% complete (motif discovery, length 300: 80.0% complete)
+overall progress: 99% complete (motif discovery, length 300: 90.0% complete)
+success; best KDIC 0.5325802810754061
+checking motif strength...
+applying ZOOPS segmentation procedure...
+ZOOPS detected motif in 716 sequences of 826
+found strong motif, saving
+found motif of the maximal allowed length 300; please, check input parameters
+estimating P-value...
+/Library/Ruby/Site/2.6.0/rubygems/core_ext/kernel_require.rb:85:in `require': cannot load such file -- RMagick (LoadError)
+	from /Library/Ruby/Site/2.6.0/rubygems/core_ext/kernel_require.rb:85:in `require'
+	from /Volumes/pool-totipotency/Pavel/projects/MOTIF_DISCOVERY/chipmunk/pmflogo3.rb:125:in `<main>'
+/Library/Ruby/Site/2.6.0/rubygems/core_ext/kernel_require.rb:85:in `require': cannot load such file -- RMagick (LoadError)
+	from /Library/Ruby/Site/2.6.0/rubygems/core_ext/kernel_require.rb:85:in `require'
+	from /Volumes/pool-totipotency/Pavel/projects/MOTIF_DISCOVERY/chipmunk/pmflogo3.rb:125:in `<main>'
