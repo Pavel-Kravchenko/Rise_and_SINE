@@ -1,6 +1,6 @@
 # Rise and SINE
 
-The repository contains scripts for the analysis and plots generation for "Mechanisms of zygotic genome activation in totipotent mammalian embryos" Pavel Kravchenko and Kikue Tachibana. _Nat. Rev. Mol. Cell Biol_ (2024).
+The repository contains scripts for the analysis and plot generation for "Mechanisms of zygotic genome activation in totipotent mammalian embryos" Pavel Kravchenko and Kikue Tachibana. _Nat. Rev. Mol. Cell Biol_ (2024).
 
 0. RNA-Seq data loading and processing - ```sbatch_scripts```
 1. RNA-Seq analysis and figures generation (Figure 3, 4, S1A) - ```RNA_Seq_analysis_and_figures.Rmd```
@@ -8,7 +8,7 @@ The repository contains scripts for the analysis and plots generation for "Mecha
 3. Figure S2 generation - ```./Figures/Figure_S2/Figure_S2.ipynb```
 4. Figure S3 generation - ```./Figures/Figure_S3/Figure_S3.ipynb```
 
-Pan-ZGA lists of different degrees could be found in the ```pan_ZGA_lists``` directory.
+Pan-ZGA lists of different degrees can be found in the ```pan_ZGA_lists``` directory.
 
 ## Before you start
 
@@ -18,7 +18,7 @@ Make sure that you have installed:
 <li>R 4.2.1 (or upper) and RStudio https://posit.co/download/rstudio-desktop/
 </ul>
 
-Please use provided ```environment_py37.yaml``` and ```R_sessioninfo.txt``` to match the environment
+Please use the provided ```environment_py37.yaml``` and ```R_sessioninfo.txt``` to match the environment
 
 ## Getting started
 
