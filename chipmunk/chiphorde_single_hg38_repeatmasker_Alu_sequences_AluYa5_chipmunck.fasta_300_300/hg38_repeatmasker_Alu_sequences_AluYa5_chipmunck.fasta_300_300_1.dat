@@ -1,7 +1,0 @@
-TOTAL = 826
-SEQUENCES = 716
-WORDS = 716
-KDIC = 0.6691845641856492
-THRESHOLD = -41.062559174816286
-PVALUE = 0.0
-DIAGNOSIS = partial success; strong motif found on the border of the given lengths interval

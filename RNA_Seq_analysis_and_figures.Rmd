@@ -1,5 +1,5 @@
 ---
-title: "10092023_ZGA_List_intersection"
+title: "The main code for 'Mechanisms of zygotic genome activation in totipotent mammalian embryos'. RNA-seq analysis and Figures 3, 4, S1A"
 output:
   html_document:
     df_print: paged
@@ -7,7 +7,7 @@ output:
 ---
 
 # Title
-# Date 10092023
+# Date 03022024
 # Name ZGA_List_intersection
 # Description The R script for DE analysis and Pan ZGA genes list reproduction
 
@@ -143,7 +143,7 @@ processRNA_Seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
                         all.x=TRUE,
                         all.y=FALSE)
   
-  write.table(annotatedRes_fpkmdds,file=paste0("./tables/annotatedRes_log2FC_" %+% directory %+% "_genes.csv"),row.names=T,quote=F,sep="\t")
+  write.table(annotatedRes_fpkmdds,file=paste0("./tables/RNA_seq_secondary_analysis_DESeq_tables/annotatedRes_log2FC_" %+% directory %+% "_genes.csv"),row.names=T,quote=F,sep="\t")
   
   if (plot_volcanoplot == T) {
     
@@ -162,7 +162,7 @@ processRNA_Seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
     
     ggplot(res_mm, aes(log2FoldChange, padj_neg10, color = significance)) +
       geom_point(shape = 16, alpha = 0.6) +
-      labs(title = "DESeq2 transcripts " %+% "Zygote_G2" %+% " vs " %+% "2cell_G2") +
+      labs(title = "DESeq2 transcripts " %+% "Zygote" %+% " vs " %+% "2cell") +
       xlab("log2FoldChange")+ ylab("-log10(padj)")+
       guides(text = guide_legend()) +
       scale_color_manual(values = c("n.s." = "darkgray",
@@ -170,14 +170,14 @@ processRNA_Seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
                                     "padj < 0.01 & log2FoldChange > 4" = "orange")) +
       NULL + theme_light()
     
-    ggsave("./figures/DE_"%+% directory %+%".pdf")
+    ggsave("./raw_figures/DE_"%+% directory %+%".pdf")
   }
   return(txi.kallisto$counts)
 }
 ```
 
 
-# Processing RNA-Seq
+# Processing RNA-Seq. Please make sure to have Kallisto pseudo alignments done before. Use sbatch_scripts to download and process the files.
 ```{r}
 home = "/Volumes/pool-toti-bioinfo/bioinfo/Pavel.Kravchenko"
 
@@ -230,7 +230,7 @@ ggplot(umap_df, aes(x = UMAP1, y = UMAP2, color=Dataset)) +
   labs(title = "UMAP Plot Colored by Dataset") +
   theme_minimal()+
   scale_color_manual(values = col_vector)
-ggsave("./figures/UMAP_datasets.pdf")
+ggsave("./raw_figures/UMAP_datasets.pdf")
 ```
 
 # Filtering ZGA genes
@@ -242,7 +242,7 @@ v_2cell_threshold = 5
 v_pval_threshold = 0.05
 log2FoldChange_threshold = 2
 home = "/Volumes/pool-toti-bioinfo/bioinfo/Pavel.Kravchenko"
-tables = "/Users/pavel/Desktop/Rise_and_SINE/tables"
+tables = "/Users/pavel/Desktop/Rise_and_SINE/tables/RNA_seq_secondary_analysis_DESeq_tables"
 
 read_and_threshold_ZGA_genes <- function(path, directory, v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold){
   working_dir = path #%+% "/" %+% directory
@@ -287,12 +287,15 @@ nVennR_gene_list_polyA <- list(
   "CAST/EiJxC57BL/6J (N=1)" = unique(toupper(annotatedRes_Deng$SYMBOL))
   )
 
-pdf("./figures/nVennR_gene_list_polyA.pdf")
+pdf("./raw_figures/nVennR_gene_list_polyA.pdf")
 p = plot(euler(nVennR_gene_list_polyA, shape="ellipse"), quantities = TRUE, legend = TRUE)
 print(p)
 dev.off()
-pV = plotVenn(nVennR_gene_list_polyA, outFile="./figures/nVennR_plot_polyA.svg")
 
+```
+
+# RNA-seq datasets ovelap
+```{r}
 set_size = function(w, h, factor=1.5) {
     s = 1 * factor
     options(
@@ -304,7 +307,7 @@ set_size = function(w, h, factor=1.5) {
     )
 }
 
-pdf("./figures/gene_list_polyA_UpSetR_plot.pdf")
+pdf("./raw_figures/gene_list_polyA_UpSetR_plot.pdf")
 set_size(8, 5)
 size = get_size_mode('exclusive_intersection')
 ComplexUpset::upset(fromList(nVennR_gene_list_polyA), #[apply(fromList(nVennR_gene_list_polyA_total),1,sum) > 3, ], 
@@ -377,10 +380,9 @@ geom_bar(stat="identity",colour=NA,linewidth=0) +
             nudge_y = range/3) +
   ggtitle("ZGA datasets intersection. \n All categories and all - k")
 
-ggsave("./figures/Pan_ZGA_gene_list_barplot.pdf")
+ggsave("./raw_figures/Pan_ZGA_gene_list_barplot.pdf")
+dev.off()
 ```
-
-
 
 # Checking Pan categories
 ```{r}
@@ -410,10 +412,10 @@ geom_bar(stat="identity",colour=NA,linewidth=0) +
             nudge_y = range/3) +
   ggtitle("Strain specific ZGA genes intersection. \n All categories and all - k")
 
-ggsave("./figures/Strain_specific_Pan_ZGA_gene_list_polyA_barplot.pdf")
+ggsave("./raw_figures/Strain_specific_Pan_ZGA_gene_list_polyA_barplot.pdf")
+dev.off()
 ```
-
-
+# Plotting the Figure_S1A using nVennR_gene_list_polyA with plotVenn
 ```{r}
 nVennR_gene_list_polyA <- list(
      "B6D2F1 pure (N=1)" = unique(toupper(annotatedRes_Chen$SYMBOL)),
@@ -426,30 +428,36 @@ nVennR_gene_list_polyA <- list(
   "CAST/EiJxC57BL/6J (N=1)" = unique(toupper(annotatedRes_Deng$SYMBOL))
   )
 
-Dux_KO <- file.path("./tables/41588_2019_418_MOESM3_ESM.xlsx")
+pV = plotVenn(nVennR_gene_list_polyA, outFile="./Figures/Figure_S1/Figure_S1A/Figure_S1A.svg")
+```
+
+
+# Plotting Pan lists overlap with TF-controlled genes. Figure 4B, 4C
+```{r}
+Dux_KO <- file.path("./Figures/Figure_4/41588_2019_418_MOESM3_ESM.xlsx")
 Dux_KO <- read_xlsx(Dux_KO, sheet=2)
 Dux_KO = Dux_KO[which(Dux_KO$...17 == "down-regulated"),]
 Dux_KO = unique(toupper(na.omit(Dux_KO[["...1"]]))) #[-c(1,2)]
-write.csv(Dux_KO, "./tables/Dux_KO_ZGA_genes.csv", row.names=FALSE)
+write.csv(Dux_KO, "./Figures/Figure_4/Dux_KO_ZGA_genes.csv", row.names=FALSE)
 
-res_mm = read.delim("./tables/science.abn7478_table_s6.csv", sep = ";")
+res_mm = read.delim("./Figures/Figure_4/science.abn7478_table_s6.csv", sep = ";")
 Nr5a2_KD = unique(toupper(na.omit(unique(res_mm[which(res_mm$State == "DOWN"),]$gene_id))))
-write.csv(Nr5a2_KD, "./tables/Nr5a2_KD_ZGA_genes.csv", row.names=FALSE)
+write.csv(Nr5a2_KD, "./Figures/Figure_4/Nr5a2_KD_ZGA_genes.csv", row.names=FALSE)
 
-res_mm = read.delim("./tables/science.abn7478_table_s5.csv", sep = ";")
+res_mm = read.delim("./Figures/Figure_4/science.abn7478_table_s5.csv", sep = ";")
 Nr5a2_SR1848 = unique(toupper(na.omit(unique(res_mm[which(res_mm$State == "DOWN"),]$gene_id))))
-write.csv(Nr5a2_SR1848, "./tables/Nr5a2_SR1848_ZGA_genes.csv", row.names=FALSE)
+write.csv(Nr5a2_SR1848, "./Figures/Figure_4/Nr5a2_SR1848_ZGA_genes.csv", row.names=FALSE)
 
 Nr5a2_total = unique(toupper(na.omit(unique(Reduce(c,list(unique(toupper(Nr5a2_SR1848)), unique(Nr5a2_KD)))))))
-write.csv(Nr5a2_total, "./tables/Nr5a2_total_ZGA_genes.csv", row.names=FALSE)
+write.csv(Nr5a2_total, "./Figures/Figure_4/Nr5a2_total_ZGA_genes.csv", row.names=FALSE)
 
-res_mm = read.delim("./tables/41586_2023_6428_MOESM3_ESM.csv", sep = ";")
+res_mm = read.delim("./Figures/Figure_4/41586_2023_6428_MOESM3_ESM.csv", sep = ";")
 Obox_KO = unique(toupper(na.omit(unique(res_mm[which(res_mm$Group == "down-regulated"),]$gene.name))))
-write.csv(Obox_KO, "./tables/Obox_KO_ZGA_genes.csv", row.names=FALSE)
+write.csv(Obox_KO, "./Figures/Figure_4/Obox_KO_ZGA_genes.csv", row.names=FALSE)
 
 
 df2 <- data.frame(gene=unique(unlist(nVennR_gene_list_polyA)))
-write.csv(df2, "./ZGA_genes_summary_table.csv", row.names=FALSE)
+write.csv(df2, "./Figures/Figure_4/ZGA_genes_summary_table.csv", row.names=FALSE)
 
 df1 <- lapply(nVennR_gene_list_polyA,function(x){
   data.frame(gene = x)
@@ -493,16 +501,19 @@ print(p)
 # length(unique(Reduce(intersect,list(unique(toupper(Obox_KO)), unique(toupper(ZGA_genes_all)))))) #404
 # length(unique(Reduce(intersect,list(unique(toupper(Nr5a2_total)), unique(toupper(ZGA_genes_all)))))) #927
 # length(unique(Reduce(intersect,list(unique(toupper(Nr5a2_KD)), unique(toupper(ZGA_genes_all)))))) #122
-# length(unique(Reduce(intersect,list(unique(toupper(Nr5a2_SR1848)), unique(toupper(ZGA_genes_all)))))) #122
+# length(unique(Reduce(intersect,list(unique(toupper(Nr5a2_SR1848)), unique(toupper(ZGA_genes_all)))))) #908
 
-pdf("./figures/NRs_Dux_Obox_Pan_ZGA_gene_list_polyA_euler.pdf")
+
+pV = plotVenn(gene_list_polyA_inter_uni, outFile="./Figures/Figure_4/Figure_4B/Figure_4B.svg")
+
+
+pdf("./raw_figures/NRs_Dux_Obox_Pan_ZGA_gene_list_polyA_euler.pdf")
 p = plot(euler(gene_list_polyA_inter_uni, shape="ellipse"), quantities = TRUE, legend = TRUE)
 print(p)
 dev.off()
-pV = plotVenn(nVennR_gene_list_polyA, outFile="./figures/nVennR_NRs_Dux_Obox_Pan_ZGA_gene_list_polyA.svg")
 
 
-pdf("./figures/NRs_Dux_Obox_Pan_ZGA_gene_list_polyA_UpSetR_plot_1500.pdf")
+pdf("./Figures/Figure_4/Figure_4C/Figure_4C_ylim_1500.pdf")
 set_size(8, 5)
 size = get_size_mode('exclusive_intersection')
 ComplexUpset::upset(fromList(gene_list_polyA_inter_uni), 
@@ -543,7 +554,7 @@ ComplexUpset::upset(fromList(gene_list_polyA_inter_uni),
 dev.off()
 
 
-pdf("./figures/NRs_Dux_Obox_Pan_ZGA_gene_list_polyA_UpSetR_plot_5000.pdf")
+pdf("./Figures/Figure_4/Figure_4C/Figure_4C_ylim_5000.pdf")
 set_size(8, 5)
 size = get_size_mode('exclusive_intersection')
 ComplexUpset::upset(fromList(gene_list_polyA_inter_uni), 
@@ -585,18 +596,20 @@ ComplexUpset::upset(fromList(gene_list_polyA_inter_uni),
 
         ) 
 dev.off()
+```
 
-
+# Generating ZGA lists from the common table
+```{r}
 colnames(pc) = c("Gene_id", "Intersection_category", "Intersection_count")
-write.csv(pc[pc$Intersection_count > 2, ], "./Pan_ZGA_lists/Pan_1_degree_ZGA_genes.csv", row.names=FALSE)
-write.csv(pc[pc$Intersection_count > 1, ], "./Pan_ZGA_lists/Pan_2_degree_ZGA_genes.csv", row.names=FALSE)
-write.csv(pc[pc$Intersection_count > 0, ], "./Pan_ZGA_lists/Pan_3_degree_ZGA_genes.csv", row.names=FALSE)
-write.csv(pc[pc$Intersection_count == 4, ], "./Pan_ZGA_lists/Core_ZGA_genes.csv", row.names=FALSE)
-write.csv(pc, "./Pan_ZGA_lists/Complete_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc[pc$Intersection_count > 2, ], "./pan_ZGA_lists/Pan_1_degree_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc[pc$Intersection_count > 1, ], "./pan_ZGA_lists/Pan_2_degree_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc[pc$Intersection_count > 0, ], "./pan_ZGA_lists/Pan_3_degree_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc[pc$Intersection_count == 4, ], "./pan_ZGA_lists/Core_ZGA_genes.csv", row.names=FALSE)
+write.csv(pc, "./pan_ZGA_lists/Complete_ZGA_genes.csv", row.names=FALSE)
 
 ```
 
-
+# Plotting Figure 4A
 ```{r}
 a = length(unique(Reduce(c,list(
 unique(Reduce(intersect,list(unique(toupper(Nr5a2_total)), unique(toupper(ZGA_genes_all))))),
@@ -620,7 +633,7 @@ data <- data %>%
   mutate(prop = value / sum(data$value) *100) %>%
   mutate(ypos = cumsum(prop)- 0.5*prop )
 
-pdf("./figures/ZGA_genes_regulation_pie_chart.pdf")
+pdf("./Figures/Figure_4/Figure_4A/Figure_4A.pdf")
 PieDonut(data, aes(group, count=value),
          ratioByGroup = FALSE)
 dev.off()

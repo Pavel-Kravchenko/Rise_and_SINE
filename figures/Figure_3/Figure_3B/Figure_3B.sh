@@ -1,0 +1,1 @@
+ python SparK.py -pr chr6:122683218-122716301 -cf ./SINE_B1.bedGraph -gtf ../../mus_musculus/Mus_musculus.GRCm38.96.gtf -gl Nr5a2 -dg Nanog -bed ./mm10_repeatmasker_spark.bed -f 808080 -sp yes -bedlab "SINE B1/Alu" -bedcol 808080
