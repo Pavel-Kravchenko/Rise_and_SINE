@@ -1,6 +1,6 @@
 # Rise and SINE
 
-The scripts provide an analysis of ZGA genes and plots generation
+The scripts provide an analysis of ZGA genes and plots generation  for "Mechanisms of zygotic genome activation in totipotent mammalian embryos" Pavel Kravchenko and Kikue Tachibana. _Nat. Rev. Mol. Cell Biol_ (2024)
 
 0. RNA-Seq data loading and processing - ```sbatch_scripts```
 1. RNA-Seq analysis and figures generation (Figure 3, 4, S1A) - ```RNA_Seq_analysis_and_figures.Rmd```
