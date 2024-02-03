@@ -1,6 +1,7 @@
 # Rise and SINE
 
-The repository contains scripts for the analysis and plot generation for "Mechanisms of zygotic genome activation in totipotent mammalian embryos" Pavel Kravchenko and Kikue Tachibana. _Nat. Rev. Mol. Cell Biol_ (2024).
+The repository contains scripts for the analysis and plot generation for
+"Mechanisms of zygotic genome activation in totipotent mammalian embryos" Pavel Kravchenko and Kikue Tachibana. _Nat. Rev. Mol. Cell Biol_ (2024).
 
 0. RNA-Seq data loading and processing - ```sbatch_scripts```
 1. RNA-Seq analysis and figures generation (Figure 3, 4, S1A) - ```RNA_Seq_analysis_and_figures.Rmd```
