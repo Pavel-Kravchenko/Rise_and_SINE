@@ -16,7 +16,7 @@ Make sure that you have installed:
 <li>R 4.2.1 (or upper) and RStudio https://posit.co/download/rstudio-desktop/
 </ul>
 
-Please use provided environment_py37.yaml and R_sessioninfo.txt to match the environment
+Please use provided ```environment_py37.yaml``` and ```R_sessioninfo.txt``` to match the environment
 
 ## Getting started
 
