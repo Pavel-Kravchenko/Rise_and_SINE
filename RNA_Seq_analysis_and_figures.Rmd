@@ -44,12 +44,12 @@ source("./readKallisto.R") # from Martin Morgan (mtmorgan)
 ```
 
 
-# Prepearing to process RNA-Seq
+# Prepearing to process RNA-seq
 ```{r}
 
-# processRNA_Seq function: from a path to Kallisto files to a sumary DE table and volcano plot
+# processRNA_seq function: from a path to Kallisto files to a sumary DE table and volcano plot
 
-processRNA_Seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
+processRNA_seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
   
   # solving some conflicts
   conflict_prefer("mutate", "dplyr")
@@ -177,20 +177,20 @@ processRNA_Seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
 ```
 
 
-# Processing RNA-Seq. Please make sure to have Kallisto pseudo alignments done before. Use sbatch_scripts to download and process the files.
+# Processing RNA-seq. Please make sure to have Kallisto pseudo alignments done before. Use sbatch_scripts to download and process the files.
 ```{r}
 home = "/Volumes/pool-toti-bioinfo/bioinfo/Pavel.Kravchenko"
 
 gtf.gr = rtracklayer::import("./mus_musculus/Mus_musculus.GRCm38.96.gtf")
 
-cnt1 = processRNA_Seq(home, "ZGA_Gassler_et_al_C57BL_6J_GSE178638_paired_polyA", gtf.gr)
-cnt2 = processRNA_Seq(home, "ZGA_Gassler_et_al_B6xCAST_GSE178638_paired_polyA", gtf.gr)
-cnt3 = processRNA_Seq(home, "ZGA_Ji_et_al_C57BL_6_GSE215813_paired_polyA", gtf.gr)
-cnt4 = processRNA_Seq(home, "ZGA_Wu_et_al_C57BL_6NxDBA_2N_GSE66582_paired_polyA", gtf.gr)
-cnt5 = processRNA_Seq(home, "ZGA_Chen_et_al_B6D2F1_GSE121746_single_polyA", gtf.gr)
-cnt6 = processRNA_Seq(home, "ZGA_Deng_et_al_CAST_EiJxC57BL_6J_GSE45719_single_polyA", gtf.gr)
-cnt7 = processRNA_Seq(home, "ZGA_Guo_et_al_C57BL_6_GSE134832_paired_polyA", gtf.gr)
-cnt8 = processRNA_Seq(home, "ZGA_Zhang_et_al_C57BL_6NxPWK_PhJ_GSE71434_paired_polyA", gtf.gr)
+cnt1 = processRNA_seq(home, "ZGA_Gassler_et_al_C57BL_6J_GSE178638_paired_polyA", gtf.gr)
+cnt2 = processRNA_seq(home, "ZGA_Gassler_et_al_B6xCAST_GSE178638_paired_polyA", gtf.gr)
+cnt3 = processRNA_seq(home, "ZGA_Ji_et_al_C57BL_6_GSE215813_paired_polyA", gtf.gr)
+cnt4 = processRNA_seq(home, "ZGA_Wu_et_al_C57BL_6NxDBA_2N_GSE66582_paired_polyA", gtf.gr)
+cnt5 = processRNA_seq(home, "ZGA_Chen_et_al_B6D2F1_GSE121746_single_polyA", gtf.gr)
+cnt6 = processRNA_seq(home, "ZGA_Deng_et_al_CAST_EiJxC57BL_6J_GSE45719_single_polyA", gtf.gr)
+cnt7 = processRNA_seq(home, "ZGA_Guo_et_al_C57BL_6_GSE134832_paired_polyA", gtf.gr)
+cnt8 = processRNA_seq(home, "ZGA_Zhang_et_al_C57BL_6NxPWK_PhJ_GSE71434_paired_polyA", gtf.gr)
 ```
 
 # Checking integrity
