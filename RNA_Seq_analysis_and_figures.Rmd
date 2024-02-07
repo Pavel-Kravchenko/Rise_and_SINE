@@ -609,6 +609,37 @@ write.csv(pc, "./pan_ZGA_lists/Complete_ZGA_genes.csv", row.names=FALSE)
 
 ```
 
+# Generating pan-ZGA list intersection with TF-controlled genes
+```{r}
+
+df2 <- data.frame(gene=unique(unlist(nVennR_gene_list_polyA)))
+
+df1 <- lapply(nVennR_gene_list_polyA,function(x){
+  data.frame(gene = x)
+}) %>% 
+  bind_rows(.id = "path")
+
+df_int <- lapply(df2$gene,function(x){
+  intersection <- df1 %>% 
+    dplyr::filter(gene==x) %>% 
+    arrange(path) %>% 
+    pull("path") %>% 
+    paste0(collapse = "|")
+  
+  data.frame(gene = x,int = intersection)
+}) %>% 
+  bind_rows()
+
+
+pc = df_int
+pc$cnt = stringi::stri_count(pc$int, fixed = "|") +1
+
+colnames(pc) = c("Gene_id", "Intersection_category", "Intersection_count")
+
+write.csv(pc, "./tables/Sup_Table_3_pan_ZGA_genes_intersection_with_TF_controlled_genes.csv", row.names=FALSE)
+
+```
+
 # Plotting Figure 4A
 ```{r}
 a = length(unique(Reduce(c,list(
