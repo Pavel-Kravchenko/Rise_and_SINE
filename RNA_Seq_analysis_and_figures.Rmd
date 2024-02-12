@@ -179,7 +179,7 @@ processRNA_seq <- function(path, directory, gtf.gr, plot_volcanoplot=T) {
 
 # Processing RNA-seq. Please make sure to have Kallisto pseudo alignments done before. Use sbatch_scripts to download and process the files.
 ```{r}
-home = "/Volumes/pool-toti-bioinfo/bioinfo/Pavel.Kravchenko"
+home = "."
 
 gtf.gr = rtracklayer::import("./mus_musculus/Mus_musculus.GRCm38.96.gtf")
 
@@ -241,8 +241,8 @@ v_1cell_threshold = 2
 v_2cell_threshold = 5
 v_pval_threshold = 0.05
 log2FoldChange_threshold = 2
-home = "/Volumes/pool-toti-bioinfo/bioinfo/Pavel.Kravchenko"
-tables = "/Users/pavel/Desktop/Rise_and_SINE/tables/RNA_seq_secondary_analysis_DESeq_tables"
+home = "."
+tables = "./tables/RNA_seq_secondary_analysis_DESeq_tables"
 
 read_and_threshold_ZGA_genes <- function(path, directory, v_1cell_threshold, v_2cell_threshold, v_pval_threshold, log2FoldChange_threshold){
   working_dir = path #%+% "/" %+% directory
