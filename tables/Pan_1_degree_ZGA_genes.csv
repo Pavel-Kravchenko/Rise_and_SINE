@@ -1,0 +1,543 @@
+"Gene_id","Intersection_category","Intersection_count"
+"1700021F05RIK","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"2610044O15RIK8","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"5730455P16RIK","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"9930104L06RIK","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"A530032D15RIK","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"AA623943","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"AAMDC","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"AC124237.1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"AC168977.1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"AGPAT5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"AKAP8","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ALKBH1","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ALPK2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ALS2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ALYREF","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ANP32E","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"AP4S1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"APRT","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"ARF4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"ARFRP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ARGLU1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ARID4B","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ARIH2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ARSK","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ATP13A3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"ATP5G1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ATP5J","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ATP5O","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ATRAID","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ATXN3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"AU015228","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"B2M","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"B4GALT3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"BAG1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"BBS2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"BC147527","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"BOLA1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"BOLA2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"BSPRY","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"BZW1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"C130026I21RIK","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"C1D","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"CAB39","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"CCDC124","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"CCDC36","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CCNB1IP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"CCNE1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CDC25C","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"CDC5L","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"CDK2AP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CDKN1A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CDKN2D","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CENPL","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CENPT","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"CENPW","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"CGGBP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CHD1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"CHPT1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"CHURC1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"CLK4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"CLP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"CLPX","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"CMSS1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"CNEP1R1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"COMMD7","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"COQ4","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"COX17","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"COX7B","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"COX7C","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CPSF6","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CROT","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CSTB","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CSTF2T","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CTF2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"CTSB","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CTSL","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"CUL3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"CYSTM1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"D16ERTD472E","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"DCDC2C","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"DDR2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"DDX20","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"DDX49","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"DECR2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"DENR","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"DHCR7","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"DHPS","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"DHTKD1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"DHX9","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"DNAJB14","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"DNAJB9","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"DPM1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"DPPA4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"DPPA5A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"DR1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"DRG1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"E030030I06RIK","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ECI1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ECSIT","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"EDF1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"EIF4EBP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ELL2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ELOA","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ELOB","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"EMC4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ESF1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"EXD2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"EXOSC5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"FAF2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"FAM45A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"FBL","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"FBXO15","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"FDPS","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"FEM1C","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"FKBP3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"FKBP4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"FMR1NB","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"FUNDC1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"G2E3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GABARAP","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"GABARAPL2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"GCSH","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"GFPT1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"GLUL","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"GM10717","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM10718","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM10719","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM10800","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM10801","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM11237","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"GM11239","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"GM11758","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM11808","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM13147","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM13736","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM16026","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM16286","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"GM16427","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"GM2000","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM20390","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM21762","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"GM21818","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"GM29761","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM3183","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"GM3286","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM428","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"GM47924","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"GM5039","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"GM5286","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"GM5616","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM7536","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM9973","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"GON7","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GPN1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"GPX1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"GPX4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"GRHL2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"GRWD1","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GTF3C6","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"H2AFJ","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"H2AFV","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"H2AFZ","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"HCCS","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"HDAC1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"HMBS","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"HMGN5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"HMMR","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"HMOX2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"HSPB1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"IDH3G","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"IER3IP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"IMPDH2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ING4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"IVNS1ABP","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"KDM5B","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"KHDRBS1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"KLF12","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"KMT5B","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"KRIT1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"KTI12","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"LAGE3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"LAMP2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"LIMCH1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"LSG1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"LSM8","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"LZTR1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MAD2L1BP","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MAP1LC3B","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MAPKAPK5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"MCTS1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MDH2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MFSD11","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"MGA","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MKRN1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MPC2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MPV17","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MRPL20","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MRPL41","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"MRPL42","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MRPL49","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MRPS24","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"MRPS26","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"MSRB1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MSTO1","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MT-ATP6","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MT-CO1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MT-CO2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MT-CO3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MT-CYTB","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MT-ND1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MT-ND2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MT-ND3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MT-ND4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MT-ND4L","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MT-ND5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MT2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"MTCH2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MYBBP1A","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NAALAD2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"NABP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"NANS","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"NAV1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NDUFA9","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NDUFB10","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"NDUFC1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"NDUFV2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NHP2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"NKTR","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"NOA1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"NOB1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"NOL7","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"NTMT1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"NUDCD2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"NUDT21","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NUDT4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"NUFIP1","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ODC1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"OIP5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"OLA1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ORMDL2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"PABPC1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PABPN1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PANK3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PBDC1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PCGF5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PDCD2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PEMT","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PEX16","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PGLYRP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PHKG2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PHLDA2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"PIN4","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PLATR17","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PLATR25","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PMS2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"POLR1C","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"POLR1E","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"POLR2E","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"POLR2H","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"POLR3B","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"POLR3G","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"PPM1A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"PPP1CC","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PPP1R8","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PPP4R3A","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PRDX6","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PRKCQ","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"PRL8A1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PRORSD1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PRPS1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"PRR23A1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"PSG16","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PSMB1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PSMB5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PSMC3IP","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PSME2","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PTDSS2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PTPN1","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PTTG1IP","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"PWP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"RAB1A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RAB2B","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RAB5A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RABGEF1","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RABGGTB","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RBBP6","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RBM5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RBM8A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RBSN","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RELCH","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"REXO4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"RHEBL1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"RMND5B","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"RNF125","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RNF7","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL10A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL18","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL21","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL22","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL23","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL23A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL24","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL26","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL27A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL30","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL35A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL37A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL38","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL39","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL41","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL7","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPL8","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPLP0","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPLP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPP14","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPS12","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS13","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS15","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS17","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS19","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPS19BP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS21","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS23","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS26","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS27A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS3A1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS4L","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPS9","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RPSA","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RRP15","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"RSF1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RSRC2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"RSRP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RUVBL1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"RWDD4A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"SAT1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SBNO1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SDF4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SENP3","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SET","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SETX","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"SF3B5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"SF3B6","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SFI1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SHMT1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SKA2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SLC16A6","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SLC1A1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"SLC25A20","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SLC25A44","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SLC30A5","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SLC30A6","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SLC38A6","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SLC39A9","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SLIRP","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SMIM4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SNAPC3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SNRNP25","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SNRPC","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SNRPD2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"SNX5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SP140","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SPIC","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SQLE","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SRSF7","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SSBP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SSR2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"SUPT4A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"SYCP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"SYS1","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TAF1D","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TALDO1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TBC1D23","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TBCC","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TBRG4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TDP2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TEFM","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TET1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TFG","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TFRC","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"THOC5","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TIGAR","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TIMM10","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TIMM17B","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TIPRL","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TMED5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TMEM120A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TMEM41B","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TMEM50B","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TMEM59","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TMEM72","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TNPO3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TOMM6","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TOR1AIP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TOX4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TRA2B","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TRIP13","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TSC22D4","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TSR1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TSR3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"TSTD2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"UAP1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"UBA52","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"UBC","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"UBE2L3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"UBXN1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"UFC1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"USMG5","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"USP32","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"USP50","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"USPL1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"UTP11","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"UTP23","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"WDR44","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"WDR45B","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"WDR74","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"WIPI2","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"WSB1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"XIAP","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"XPO1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"YIF1A","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"YME1L1","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"ZBTB8OS","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"ZFP143","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ZFP281","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ZFP7","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)",3
+"ZFP809","B6D2F1 pure (N=1)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ZFP981","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ZNHIT3","B6D2F1 pure (N=1)|C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",4
+"0610012G03RIK","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"1810009A15RIK","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"2210016F16RIK","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"2210409E12RIK","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"2410015M20RIK","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ADSL","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ARL3","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ARPC1A","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"BLOC1S2","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"C1QBP","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CACYBP","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CDK9","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CEP63","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CFDP1","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CHEK2","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"CHMP2A","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"COA7","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"COPS6","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"COX14","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"DDT","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"DNAJC15","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"EBNA1BP2","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"EIF3G","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"EIF4E2","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"EXOSC2","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"FCF1","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"FOXR1","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GLRX3","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GM46223","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"GTF2H5","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"HNRNPAB","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"IMP3","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"INO80C","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"IPO4","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ISYNA1","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"KNOP1","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"LSM12","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MAP1LC3A","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MRPL34","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MRPL51","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MRPS6","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MT-ATP8","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"MT-ND6","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NAA38","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NDUFA11","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NDUFA7","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NELFE","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NFYB","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NIP7","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NME1","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NOL12","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NOP10","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NR5A2","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"NUB1","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PA2G4","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PFDN6","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"POLR2K","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"POLR2L","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PPM1G","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PPP1R15A","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PRPS1L3","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PSMB4","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"PSMD14","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RBMX2","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RNF6","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RNPC3","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPF2","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL13","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL13A","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL19","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL27","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL31","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL34","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL36A","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL36AL","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL37","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL39L","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPL6","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPLP2","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPRD1A","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPS10","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPS11","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPS16","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPS25","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPS29","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPS4X","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPS6","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RPS7","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"RRP9","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SEC63","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SIRT1","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SNAPC5","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SNRPA","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SRSF1","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"SS18L2","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TIMM13","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TIMM8A1","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TOMM22","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TOMM7","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TRAPPC4","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"TRIR","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"UBAP1","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"UBE2J2","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"UBL4A","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"UBR5","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"UQCRQ","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"UXT","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ZFP639","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ZMAT5","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ZNRD1","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
+"ZSCAN5B","C57BL/6 pure (N=3)|C57BL/6 x mix (N=3)|CAST/EiJxC57BL/6J (N=1)",3
