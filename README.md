@@ -4,10 +4,8 @@ The repository contains scripts for the analysis and plot generation for
 "Mechanisms of zygotic genome activation in totipotent mammalian embryos" Pavel Kravchenko and Kikue Tachibana. (2024).
 
 0. RNA-seq data loading and processing - ```sbatch_scripts```
-1. RNA-seq analysis and figures generation (Figure 3, 4, S1A) - ```RNA_seq_analysis_and_figures.Rmd```
-2. Figure S1B generation - ```./Figures/Figure_S1/Figure_S1B/Figure_S1B.ipynb```
-3. Figure S2 generation - ```./Figures/Figure_S2/Figure_S2.ipynb```
-4. Figure S3 generation - ```./Figures/Figure_S3/Figure_S3.ipynb```
+1. RNA-seq analysis and figures generation (Figure S1 A and B) - ```RNA_seq_analysis_and_figures.Rmd```
+2. Figure S1 C and D generation - ```./Figures/Figure_S1/Figure_S1_C_and_D.ipynb```
 
 Pan-ZGA lists of different degrees can be found in the ```pan_ZGA_lists``` directory.
 
