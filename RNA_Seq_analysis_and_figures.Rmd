@@ -441,7 +441,10 @@ Dux_KO = unique(toupper(na.omit(Dux_KO[["...1"]]))) #[-c(1,2)]
 write.csv(Dux_KO, "./Figures/Figure_S1/Figure_1SB/Dux_KO_ZGA_genes.csv", row.names=FALSE)
 
 res_mm = read.delim("./Figures/Figure_S1/Figure_1SB/science.abn7478_table_s6.csv", sep = ";")
-Nr5a2_KD = unique(toupper(na.omit(unique(res_mm[which(res_mm$State == "DOWN"),]$gene_id))))
+res_mm = res_mm %>% transform(padj = as.numeric(sub(",", ".", padj, fixed = TRUE)), 
+               log2FoldChange = as.numeric(sub(",", ".", log2FoldChange, fixed = TRUE))) %>% 
+  dplyr::filter(padj<0.1) %>% group_by(gene_id) %>% summarize(log2FoldChange_m=mean(log2FoldChange)) %>% ungroup() %>% dplyr::filter(log2FoldChange_m<0)
+Nr5a2_KD = unique(toupper(na.omit(unique(res_mm$gene_id))))
 write.csv(Nr5a2_KD, "./Figures/Figure_S1/Figure_1SB/Nr5a2_KD_ZGA_genes.csv", row.names=FALSE)
 
 res_mm = read.delim("./Figures/Figure_S1/Figure_1SB/science.abn7478_table_s5.csv", sep = ";")
