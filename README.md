@@ -4,8 +4,10 @@ The repository contains scripts for the analysis and plot generation for
 "Rise and SINE: roles of transcription factors and retrotransposable elements in zygotic genome activation of mammalian embryos" Pavel Kravchenko and Kikue Tachibana. (2024).
 
 0. RNA-seq data loading and processing - ```sbatch_scripts```
-1. RNA-seq analysis and figures generation (Figure S1 A and B) - ```RNA_seq_analysis_and_figures.Rmd```
-2. Figure S1 C and D generation - ```./Figures/Figure_S1/Figure_S1_C_and_D.ipynb```
+1. RNA-seq analysis and figures generation (Figure S1 A and C) - ```RNA_seq_analysis_and_figures.Rmd```
+2. Figure S1D1 generation - ```./Figures/Figure_S1/Figure_S1D1/Figure_S1D1.ipynb```
+3. Figure S1D 2 and 3 generation - ```./Figures/Figure_S1/Figure_S1D23/Figure_S1D23.ipynb```
+4. Figure S1 E and F generation - ```./Figures/Figure_S1/Figure_S1_E_and_F.ipynb```
 
 Pan-ZGA lists of different degrees can be found in the ```pan_ZGA_lists``` directory.
 
