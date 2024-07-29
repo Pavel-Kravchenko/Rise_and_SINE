@@ -1,7 +1,7 @@
 # Rise and SINE
 
 The repository contains scripts for the analysis and plot generation for
-"Rise and SINE: roles of transcription factors and retrotransposable elements in zygotic genome activation of mammalian embryos" Pavel Kravchenko and Kikue Tachibana. (2024).
+"Rise and SINE: roles of transcription factors and retrotransposable elements in zygotic genome activation of mammalian embryos" Pavel Kravchenko and Kikue Tachibana. _Nat. Rev. Mol. Cell Biol_ (2024).
 
 0. RNA-seq data loading and processing - ```sbatch_scripts```
 1. RNA-seq analysis and figures generation (Figures S1 A and C) - ```RNA_seq_analysis_and_figures.Rmd```
