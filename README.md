@@ -9,7 +9,7 @@ The repository contains scripts for the analysis and plot generation for
 3. Figures S1D 2 and 3 generation - ```./Figures/Figure_S1/Figure_S1D23/Figure_S1D23.ipynb```
 4. Figures S1 E and F generation - ```./Figures/Figure_S1/Figure_S1_E_and_F.ipynb```
 
-Pan-ZGA lists of different degrees can be found in the ```pan_ZGA_lists``` directory.
+Pan-ZGA lists of different degrees can be found in the ```pan_ZGA_lists``` directory. Pan-ZGA list of the 1st degree is used in the work.
 
 ## Before you start
 
