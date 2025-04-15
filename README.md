@@ -9,7 +9,20 @@ The repository contains scripts for the analysis and plot generation for
 3. Figures S1D 2 and 3 generation - ```./Figures/Figure_S1/Figure_S1D23/Figure_S1D23.ipynb```
 4. Figures S1 E and F generation - ```./Figures/Figure_S1/Figure_S1_E_and_F.ipynb```
 
-Pan-ZGA lists of different degrees can be found in the ```pan_ZGA_lists``` directory. Pan-ZGA list of the 1st degree is used in the work.
+Pan-ZGA lists of different degrees can be found in the ```pan_ZGA_lists``` directory. Pan-ZGA list of the 1st degree is used in the work (```./Pan_ZGA_lists/Pan_1_degree_ZGA_genes.csv```).
+
+
+<img src="figures/FigS1A.png" alt="Diagram" width="500"/>
+Figure S1A. Venn diagram of ZGA list intersections grouped by mouse strain background. The core intersection consists of 200 ZGA genes. Overlaps comprising the pan-ZGA genes list of the 1st degree are indicated by white circles. The pan-ZGA genes list of the 1st degree consists of 542 genes (See Formula 1).
+</br></br>
+
+<img src="figures/Formula1.png" alt="Diagram" width="500"/>
+Formula 1. Selection of pan-ZGA genes. The union of the intersection of all individual ZGA gene lists in 𝔸={Z1, Z2, …, Zn} with the union of intersections of all individual ZGA gene lists but one indexed as k, where k is every ZGA list from 𝔸. Pan-ZGA genes of 2, 3, …, n-1 degree could be produced similarly, excluding 2, 3, …, n-1 k datasets, respectively. The first argument of the intersection of all individual ZGA gene lists was isolated to introduce the core ZGA list explicitly.
+</br></br>
+
+<img src="figures/FigS1B.png" alt="Diagram" width="500"/>
+Figure S1B. Pan-ZGA genes are partially controlled by orphan nuclear receptors (OrphNRs), OBOX and DUX. Pan-ZGA genes intersect with 85% of overlapped downregulated genes upon OrphNRs, OBOX or DUX perturbation, leaving 15% of genes regulated by currently unknown factors. The former category is comprised of 78% regulated by OrphNRs, 40% regulated by OBOX, and 4.6% regulated by DUX. OrphNRs and OBOX together regulate 34% of pan-ZGA genes.
+</br></br>
 
 ## Before you start
 
